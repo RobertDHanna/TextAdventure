@@ -17,7 +17,7 @@ public class World
         this.player = player;
         this.currPlayerAreaId = currPlayerAreaId;
     }
-
+    
     public void handleAction(String action) {
         // turn into List<String>
     }
