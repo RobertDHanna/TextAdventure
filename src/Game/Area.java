@@ -1,7 +1,7 @@
 package Game;
 
 import Game.Item;
-
+import Game.World;
 import java.util.List;
 
 public class Area
@@ -9,14 +9,16 @@ public class Area
     private String id;
     private String name;
     private String description;
-    private List<Item> items;
+    private List<String> itemIds;
+    private World world;
 
-    public Area(String id, String name, String description, List<Item> items)
+    public Area(String id, String name, String description, List<String> itemIds, World world)
     {
         this.id = id;
         this.name = name;
         this.description = description;
-        this.items = items;
+        this.itemIds = itemIds;
+        this.world = world;
     }
 
     public String getId()
@@ -34,8 +36,20 @@ public class Area
         return description;
     }
 
-    public List<Item> getItems()
+    public List<String> getItemIds()
     {
-        return items;
+        return itemIds;
+    }
+
+    public void handleAction(List<String> input) {
+
+    }
+
+    private void handleInspect() {
+
+    }
+
+    private void handleWhere() {
+
     }
 }
