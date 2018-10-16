@@ -1,24 +1,26 @@
 package Game.encode;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.Reader;
+import java.io.Writer;
 
 /**
  * This class handles all encoding(and will have methods for decoding) to and from JSON
  */
 public class Encoder {
-
-    private Gson gson = new Gson();
 
     public Encoder() {
     }
@@ -27,25 +29,39 @@ public class Encoder {
      * This encodes java objects into JSON
      *
      * @param obj      The object to encode
-     * @param respBody The output stream
+     * @param filename  The file we are writing to
      */
-    public void encode(Object obj, OutputStream respBody) throws IOException {
+    public void encode(Object obj, String filename) throws Exception {
         System.out.println(obj.getClass());
-        OutputStreamWriter writer = new OutputStreamWriter(respBody);
-        writer.write(gson.toJson(obj));
-        writer.flush();
+        try {
+            Writer writer = new FileWriter(filename);
+            Gson gson = new GsonBuilder().create();
+            gson.toJson(obj, writer);
+            writer.close();
 
-
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+            throw e;
+        }
     }
 
-    /*public Object decode(InputStream stream) {
+    /**
+     * This method decodes a JSON file into a Java object
+     *
+     * @param myClass The class we are returning
+     * @param filename  The file we are reading from
+     */
+    public Object decode(Class myClass,String filename) throws Exception {
+        Object obj = null;
         try {
-            Reader reader = new InputStreamReader(stream);
-            return gson.fromJson(reader, Object.class);
+            Reader reader = new FileReader(filename);
+            Gson gson = new GsonBuilder().create();
+            obj = gson.fromJson(reader, myClass);
         } catch (Exception e) {
             System.out.println(e.getMessage());
+            throw e;
         }
-        return
-    }*/
+        return obj;
+    }
 }
 
