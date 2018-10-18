@@ -1,8 +1,5 @@
-package Game;
+package Game.model;
 
-import Game.Connection;
-import Game.Player;
-import Game.Map;
 import java.util.HashMap;
 import java.util.List;
 

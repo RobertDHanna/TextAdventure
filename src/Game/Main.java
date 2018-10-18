@@ -1,6 +1,7 @@
 package Game;
 
 import Game.encode.Encoder;
+import Game.model.Game;
 
 public class Main {
 

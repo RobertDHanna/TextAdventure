@@ -1,7 +1,7 @@
-package Game;
+package Game.model;
 
-import Game.Item;
-import Game.World;
+import Game.model.Game;
+
 import java.util.List;
 
 public class Area
