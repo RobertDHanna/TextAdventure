@@ -1,0 +1,28 @@
+{
+  "areas":
+  [
+    {
+    "id": "candle_room",
+    "name": "The Candle Room",
+    "description": "The room is empty except for a candle. You can see a doorway.",
+    "itemIds": [
+      "candle_stick"
+    ]
+    },
+    {
+    "id": "lonely_hideout",
+    "name": "The Lonely Hideout",
+    "description": "You see an empty bedroll and a dead campfire. You see a hole in the ground in the corner of the room.",
+    "itemIds": [
+      "bedroll",
+      "hidden_key"
+    ]
+    },
+    {
+    "id": "dusty_cave",
+    "name": "The Dusty Cave",
+    "description": "The cave is dark, wet, and cold. You smell trees and fresh air just around the corner...",
+    "itemIds": []
+    }
+  ]
+}

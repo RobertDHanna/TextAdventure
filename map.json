@@ -1,0 +1,45 @@
+{
+  "startAreaId": "candle_room",
+  "endAreaId": "dusty_cave",
+  "connectionList": [
+    {
+      "areaId": "candle_room",
+      "traversables": [
+        {
+          "toAreaId": "lonely_hideout",
+          "traversableName": "Wooden Door",
+          "description": "An old wooden door",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "lonely_hideout",
+      "traversables": [
+        {
+          "toAreaId": "candle_room",
+          "traversableName": "Metal Door",
+          "description": "A shiny metal door",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "dusty_cave",
+          "traversableName": "Ladder",
+          "description": "A wooden ladder",
+          "requiredItemIds": ["hidden_key"]
+        }
+      ]
+    },
+    {
+      "areaId": "dusty_cave",
+      "traversables": [
+        {
+          "toAreaId": "lonely_hideout",
+          "traversableName": "Hatch",
+          "description": "A hatch in the ground",
+          "requiredItemIds": ["hidden_key"]
+        }
+      ]
+    }
+  ]
+}

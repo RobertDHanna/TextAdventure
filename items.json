@@ -1,0 +1,29 @@
+{
+  "items": [
+    {
+      "id": "candle_stick",
+      "description": "just an ordinary candle stick",
+      "pickupable": true,
+      "action_triggers": [
+        "candle"
+      ]
+    },
+    {
+      "id": "bedroll",
+      "description": "You look inside the bed and find a mysterious key...",
+      "pickupable": false,
+      "action_triggers": [
+        "bed",
+        "bedroll"
+      ]
+    },
+    {
+      "id": "hidden_key",
+      "description": "The key is in the shape of a pumpkin ...",
+      "pickupable": true,
+      "action_triggers": [
+        "key"
+      ]
+    }
+  ]
+}
