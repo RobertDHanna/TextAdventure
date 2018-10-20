@@ -9,10 +9,6 @@ public class ItemList {
         this.items = items;
     }
 
-    /*public List<Item> getItems() {
-        return items;
-    }*/
-
     /*Lets you get a specific item by its id
      * @param id The id to get the item by
      * @return Item object that corresponds to the id

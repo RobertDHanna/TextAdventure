@@ -1,7 +1,7 @@
 package game.model;
 
 import java.util.List;
-/*Holds the list of areas fro mthe areas.json file
+/*Holds the list of areas from the areas.json file
 *
 * **/
 public class AreaList {
@@ -11,9 +11,6 @@ public class AreaList {
         this.areas = areas;
     }
 
-    /*public List<Area> getAreas() {
-        return areas;
-    }*/
     /*Lets you get a specific area by its id
     * @param id The id to get the area by
     * @return Area object that corresponds to the id
