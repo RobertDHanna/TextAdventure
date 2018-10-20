@@ -1,14 +1,7 @@
-package Game.tests;
-
 import Game.model.AreaList;
 import Game.model.ItemList;
 import Game.model.Model;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
-import java.util.List;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -80,8 +73,4 @@ class ModelTest {
         assertNotNull(itemList.getItem("bedroll"));
         assertNotNull(itemList.getItem("hidden_key"));
     }
-
-   // @AfterEach
-    //void tearDown() {
-   // }
 }

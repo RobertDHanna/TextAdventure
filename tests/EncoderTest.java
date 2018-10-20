@@ -1,15 +1,7 @@
-package Game.tests;
-
-
 import Game.encode.Encoder;
 import Game.model.Item;
-//import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.*;
-
-
 import java.util.Arrays;
-
-//import static org.junit.Assert.*;
 
 class EncoderTest {
 
