@@ -2,6 +2,8 @@ package game.model;
 
 import game.encode.Encoder;
 
+import java.io.IOException;
+
 /*
 *
 * This class holds all the data for the game. When the game starts up the model is created
@@ -24,27 +26,27 @@ public class Model {
     * **/
     public static Model getInstance() {
         if (instance == null) {
-            try {
-                instance = new Model();
-            } catch (Exception e) {
-                e.printStackTrace();
-                System.exit(1);
-            }
+            instance = new Model();
         }
         return instance;
     }
 
     /**Creation of model data starts here*/
-    private Model() throws Exception {
-        setupModelData();
+    private Model() {
+        try {
+            setupModelData();
+        } catch (Exception e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
     }
 
     /*Setup the data that needs to go inside the model**/
-    private void setupModelData() throws Exception {
+    private void setupModelData() throws IOException {
         Encoder en = new Encoder();
-        map = (Map) en.decode(Map.class,"map.json");
-        listOfAreas = (AreaList) en.decode(AreaList.class,"areas.json");
-        itemList = (ItemList) en.decode(ItemList.class,"items.json");
+        map = en.decodeFromFile(Map.class,"map.json");
+        listOfAreas = en.decodeFromFile(AreaList.class,"areas.json");
+        itemList = en.decodeFromFile(ItemList.class,"items.json");
 
     }
 
