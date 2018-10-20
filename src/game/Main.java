@@ -1,8 +1,4 @@
-package Game;
-
-import Game.encode.Encoder;
-import Game.model.Game;
-import Game.model.Model;
+package game;
 
 public class Main {
 

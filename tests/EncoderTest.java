@@ -1,5 +1,5 @@
-import Game.encode.Encoder;
-import Game.model.Item;
+import game.encode.Encoder;
+import game.model.Item;
 import org.junit.jupiter.api.*;
 import java.util.Arrays;
 

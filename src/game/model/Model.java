@@ -1,9 +1,6 @@
-package Game.model;
+package game.model;
 
-import Game.encode.Encoder;
-
-import java.util.ArrayList;
-import java.util.List;
+import game.encode.Encoder;
 
 /*
 *

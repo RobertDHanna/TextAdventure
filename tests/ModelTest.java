@@ -1,6 +1,6 @@
-import Game.model.AreaList;
-import Game.model.ItemList;
-import Game.model.Model;
+import game.model.AreaList;
+import game.model.ItemList;
+import game.model.Model;
 import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
