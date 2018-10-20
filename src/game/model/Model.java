@@ -19,7 +19,7 @@ public class Model {
     /*This variable holds all items in the game from the items.json file**/
     private ItemList itemList;
     /*This variable holds the map object from the map.json file**/
-    private Map map;
+    private GameMap map;
 
     /*Get an instance of the model
     * This makes it so we only ever have one instance of the model class
@@ -44,7 +44,7 @@ public class Model {
     /*Setup the data that needs to go inside the model**/
     private void setupModelData() throws IOException {
         Encoder en = new Encoder();
-        map = en.decodeFromFile(Map.class,"map.json");
+        map = en.decodeFromFile(GameMap.class,"map.json");
         listOfAreas = en.decodeFromFile(AreaList.class,"areas.json");
         itemList = en.decodeFromFile(ItemList.class,"items.json");
 
@@ -59,7 +59,7 @@ public class Model {
         return itemList;
     }
 
-    public Map getMap() {
+    public GameMap getMap() {
         return map;
     }
 }

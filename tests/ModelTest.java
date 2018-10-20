@@ -25,7 +25,7 @@ class ModelTest {
         assertNotNull(model.getMap());
     }
 
-    //Test to see if the areas are in the Map
+    //Test to see if the areas are in the GameMap
     @Test
     void checkAreaIDsTest(){
         assertEquals(model.getMap().getStartAreaId(),"candle_room");
@@ -35,7 +35,7 @@ class ModelTest {
         assertEquals(model.getMap().getConnectionList().get(1).getAreaId(),"lonely_hideout");
     }
 
-    //Test to see if the correct connections are in the Map object
+    //Test to see if the correct connections are in the GameMap object
     @Test
     void checkConnectionsTest(){
         assertEquals(model.getMap().getConnectionList().get(0).getTraversables().size(),1);
