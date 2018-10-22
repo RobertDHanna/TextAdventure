@@ -39,8 +39,18 @@ public class Area
         return itemIds;
     }
 
-    public void handleAction(List<String> input) {
-
+    public void handleAction(List<String> inputList) {
+        for (String item : inputList) {
+            System.out.println("|" + item + "|");
+        }
+        switch (inputList.get(0)) {
+            case "go":
+                World.print("Go command recognized.\n");
+                break;
+            case "inspect":
+                World.print("Inspect command recognized.\n");
+                break;
+        }
     }
 
     private void handleInspect() {

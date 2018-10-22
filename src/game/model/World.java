@@ -1,8 +1,7 @@
 package game.model;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class World
 {
@@ -36,11 +35,29 @@ public class World
         this.itemIdToItem = itemIdToItem;
     }
 
-    public void handleAction(String action) {
-        // turn into List<String>
+    public void handleInput(String input) {
+        List<String> actionList = new ArrayList<>(Arrays.asList(input.split("\\s+")))
+                .stream().filter(action -> action.length() > 0)
+                .map(action -> action.trim())
+                .collect(Collectors.toList());
+        areaIdToArea.get(this.currPlayerAreaId).handleAction(actionList);
     }
 
     public void handlePlayerMove(String AreaId) {
 
+    }
+
+    public String getCurrentPlayerAreaDescription() {
+        return areaIdToArea.get(this.currPlayerAreaId).getDescription();
+    }
+
+    public String getStartingWorldDialog() {
+        return "Welcome to the game!\n";
+    }
+
+    public static void print(String... printables) {
+        for (String printable : printables) {
+            System.out.print(printable);
+        }
     }
 }
