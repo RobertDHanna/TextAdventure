@@ -7,22 +7,22 @@ public class Item
     private String id;
     private String description;
     private Boolean pickupable;
-    private List<String> actionTriggers;
+    private List<String> action_triggers;
 
     public Item(String id, String description, Boolean pickupable, List<String> actionTriggers)
     {
         this.id = id;
         this.description = description;
         this.pickupable = pickupable;
-        this.actionTriggers = actionTriggers;
+        this.action_triggers = actionTriggers;
     }
 
-    public String getId()
+    String getId()
     {
         return id;
     }
 
-    public String getDescription()
+    String getDescription()
     {
         return description;
     }
@@ -32,8 +32,8 @@ public class Item
         return pickupable;
     }
 
-    public List<String> getActionTriggers()
+    List<String> getAction_triggers()
     {
-        return actionTriggers;
+        return action_triggers;
     }
 }

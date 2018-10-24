@@ -47,9 +47,10 @@ public class Model {
         map = en.decodeFromFile(GameMap.class,"map.json");
         listOfAreas = en.decodeFromFile(AreaList.class,"areas.json");
         itemList = en.decodeFromFile(ItemList.class,"items.json");
+        itemList.setupItemList();
 
     }
-
+    //TODO would it be a good idea just to make these 3 private? Would have to change test code however
     public AreaList getListOfAreas() {
         return listOfAreas;
     }
@@ -61,5 +62,23 @@ public class Model {
 
     public GameMap getMap() {
         return map;
+    }
+
+
+    /*Returns a item that is tied to a given ID*
+    * @param itemID the ID of the item we want
+    * @return The required Item object, or null if nothing is found
+    * */
+    Item getItem(String itemID){
+        return this.getItemList().getItem(itemID);
+    }
+
+    /*
+    * Returns the ID of an item that was found by it's trigger
+    * @param triggerStr The supposed trigger
+    * @return String the id of the item whose trigger was passed in
+    * **/
+    String stringIsTrigger(String triggerStr){
+        return this.getItemList().findIDByTrigger(triggerStr);
     }
 }

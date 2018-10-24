@@ -19,7 +19,7 @@ public class Area
         this.world = world;
     }
 
-    public String getId()
+    String getId()
     {
         return id;
     }
@@ -29,7 +29,7 @@ public class Area
         return name;
     }
 
-    public String getDescription()
+    String getDescription()
     {
         return description;
     }
@@ -39,23 +39,54 @@ public class Area
         return itemIds;
     }
 
-    public void handleAction(List<String> inputList) {
+    void handleAction(List<String> inputList) {
         for (String item : inputList) {
             System.out.println("|" + item + "|");
         }
-        switch (inputList.get(0)) {
+        if (inputList.isEmpty()){
+            return;
+        }
+        switch (inputList.get(0).toLowerCase()) {
             case "go":
                 World.print("Go command recognized.\n");
                 break;
             case "inspect":
-                World.print("Inspect command recognized.\n");
+                //World.print("Inspect command recognized.\n");
+                if (inputList.size() != 2){
+                    World.print(String.format("Incorrect number of arguments: %d\n" +
+                                              "Usage %s %s",inputList.size(),
+                                             "|"+"inspect|","|"+"\'item\'|\n"));
+                    break;
+                }
+                handleInspect(inputList.get(1));
                 break;
         }
     }
-
-    private void handleInspect() {
-
+    /*This method verifies that the string passed in is an action trigger for an item in the current room
+    * @param trigger The string that might correspond to an item's action trigger
+    * @return String The id of item whose trigger was passed in
+    * **/
+    private String verifyTriggers(String trigger) {
+        return Model.getInstance().stringIsTrigger(trigger.toLowerCase());
     }
+
+
+    private void handleInspect(String trigger) {
+        String itemStr = verifyTriggers(trigger);
+        Item myItem = Model.getInstance().getItem(itemStr);
+
+        if(myItem == null){
+            World.print(String.format("No such item \'%s\' in this area\n",itemStr));
+        }
+        else if(myItem.getDescription().isEmpty()){
+            World.print("There seems to be no description for this object\n");
+        }
+        else {
+            World.print(myItem.getDescription());
+        }
+    }
+
+
 
     private void handleWhere() {
 
