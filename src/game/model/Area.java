@@ -76,7 +76,7 @@ public class Area
         Item myItem = Model.getInstance().getItem(itemStr);
 
         if(myItem == null){
-            World.print(String.format("No such item \'%s\' in this area\n",itemStr));
+            World.print(String.format("No such item \'%s\' in this area\n",trigger));
         }
         else if(myItem.getDescription().isEmpty()){
             World.print("There seems to be no description for this object\n");
