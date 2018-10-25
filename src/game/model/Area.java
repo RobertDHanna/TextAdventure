@@ -40,15 +40,19 @@ public class Area
     }
 
     void handleAction(List<String> inputList) {
-        for (String item : inputList) {
-            System.out.println("|" + item + "|");
-        }
         if (inputList.isEmpty()){
             return;
         }
         switch (inputList.get(0).toLowerCase()) {
             case "go":
-                World.print("Go command recognized.\n");
+                if (inputList.size() < 2){
+                    World.print(String.format("Incorrect number of arguments: %d\n" +
+                                    "Usage %s %s",inputList.size(),
+                            "|"+"go|","|"+"\'area\'|\n"));
+                    break;
+                }
+                inputList.remove(0);
+                handleGo(String.join(" ", inputList));
                 break;
             case "inspect":
                 //World.print("Inspect command recognized.\n");
@@ -59,6 +63,9 @@ public class Area
                     break;
                 }
                 handleInspect(inputList.get(1));
+                break;
+            case "look":
+                handleLook();
                 break;
         }
     }
@@ -86,9 +93,33 @@ public class Area
         }
     }
 
+    private void handleGo(String traversableName) {
+        traversableName = traversableName.toLowerCase();
+        List<Traversable> traversables = world.getTraversables(id);
+        for (Traversable traversable : traversables) {
+            String lowerCaseName = traversable.getTraversableName().toLowerCase();
+            if (traversableName.equals(lowerCaseName)) {
+                world.goToArea(traversable);
+                return;
+            }
+        }
+    }
 
 
-    private void handleWhere() {
 
+    private void handleLook() {
+        world.describeArea(this);
+        StringBuilder sb = new StringBuilder();
+        sb.append("\nYou see: a ");
+        List<Traversable> traversables = world.getTraversables(id);
+        for (Traversable traversable : traversables) {
+            sb.append(traversable.getTraversableName() + ", a ");
+        }
+        String trimmed = sb.substring(0, sb.toString().length() - 4);
+        World.print(trimmed + ".\n");
+    }
+
+    public void setWorld(World world) {
+        this.world = world;
     }
 }

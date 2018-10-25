@@ -21,7 +21,9 @@ public class World
         Map<String, Area> areaIdToArea = new HashMap<>();
         Map<String, List<Traversable>> areaIdToTraversables = new HashMap<>();
         for(Connection connection : this.map.getConnectionList()) {
-            areaIdToArea.put(connection.getAreaId(), model.getListOfAreas().getArea(connection.getAreaId()));
+            Area area = model.getListOfAreas().getArea(connection.getAreaId());
+            area.setWorld(this);
+            areaIdToArea.put(connection.getAreaId(), area);
             areaIdToTraversables.put(connection.getAreaId(), connection.getTraversables());
         }
 
@@ -59,5 +61,21 @@ public class World
         for (String printable : printables) {
             System.out.print(printable);
         }
+    }
+
+    public List<Traversable> getTraversables(String areaId) {
+        return areaIdToTraversables.get(areaId);
+    }
+
+    public void goToArea(Traversable traversable) {
+        World.print("\nYou go through ", traversable.getTraversableName(), "\n");
+        currPlayerAreaId = traversable.getToAreaId();
+        Area area = areaIdToArea.get(currPlayerAreaId);
+        describeArea(area);
+    }
+
+    public void describeArea(Area area) {
+        World.print("\n", area.getName(),"\n");
+        World.print("\n", area.getDescription(), "\n");
     }
 }
