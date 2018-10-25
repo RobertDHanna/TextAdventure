@@ -3,6 +3,7 @@ package game.model;
 import game.encode.Encoder;
 
 import java.io.IOException;
+import java.util.List;
 
 /*
 *
@@ -76,9 +77,10 @@ public class Model {
     /*
     * Returns the ID of an item that was found by it's trigger
     * @param triggerStr The supposed trigger
+    * @param areaIItemIDS The ids of items that are associated with a given areas
     * @return String the id of the item whose trigger was passed in
     * **/
-    String stringIsTrigger(String triggerStr){
-        return this.getItemList().findIDByTrigger(triggerStr);
+    String stringIsTrigger(String triggerStr, List<String> areaItemIDS){
+        return this.getItemList().findIDByTrigger(triggerStr,areaItemIDS);
     }
 }

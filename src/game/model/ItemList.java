@@ -32,16 +32,16 @@ public class ItemList {
         }
         return null;
     }
-    //TODO could be simplified if triggers were mapped to ids as well, but does it really matter?
-    /*Finds an item's ID by a given trigger
+    /*Finds an item's ID that corresponds to a given action trigger
     * @param trigger the string which is supposed to be a trigger
+    * @param areaItemIDS A List of item ids associated with a given area
     * @return String The ID of item is returned if found, else empty string**/
-    String findIDByTrigger(String trigger){
-        for (Map.Entry<String, List<String>> entry : idToListOfTriggers.entrySet())
-        {
-            //System.out.println(entry.getKey() + "/" + entry.getValue());
-            if (entry.getValue() != null && entry.getValue().contains(trigger)){
-                return entry.getKey();
+    String findIDByTrigger(String trigger,List<String> areaItemIDS){
+        for (String id : areaItemIDS) {
+            //get the action triggers that go with this id and see if trigger is in there
+            List<String> triggers = idToListOfTriggers.get(id);
+            if (triggers.contains(trigger)) {
+                return id;
             }
         }
         return "";

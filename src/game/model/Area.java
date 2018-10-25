@@ -69,17 +69,19 @@ public class Area
                 break;
         }
     }
-    /*This method verifies that the string passed in is an action trigger for an item in the current room
+    /*This method verifies that the string passed in is an action trigger for an item in the current room and
+    * then returns that item id
     * @param trigger The string that might correspond to an item's action trigger
+    * @param areaITemIDS The list of item ids for this area
     * @return String The id of item whose trigger was passed in
     * **/
-    private String verifyTriggers(String trigger) {
-        return Model.getInstance().stringIsTrigger(trigger.toLowerCase());
+    private String verifyTriggers(String trigger,List<String> areaItemIDS) {
+        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS);
     }
 
 
     private void handleInspect(String trigger) {
-        String itemStr = verifyTriggers(trigger);
+        String itemStr = verifyTriggers(trigger,getItemIds());
         Item myItem = Model.getInstance().getItem(itemStr);
 
         if(myItem == null){
