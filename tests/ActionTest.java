@@ -1,5 +1,5 @@
-package game.model;
-
+import game.model.Model;
+import game.model.World;
 import org.junit.jupiter.api.*;
 
 import java.io.ByteArrayInputStream;
