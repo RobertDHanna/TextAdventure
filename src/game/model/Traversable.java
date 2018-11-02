@@ -7,13 +7,15 @@ public class Traversable
     private String toAreaId;
     private String traversableName;
     private String description;
+    private String traversableActionString;
     private List<String> requiredItemIds;
 
-    public Traversable(String toAreaId, String traversableName, String description, List<String> requiredItemIds)
+    public Traversable(String toAreaId, String traversableName, String description, String traversableActionString, List<String> requiredItemIds)
     {
         this.toAreaId = toAreaId;
         this.traversableName = traversableName;
         this.description = description;
+        this.traversableActionString = traversableActionString;
         this.requiredItemIds = requiredItemIds;
     }
 
@@ -31,6 +33,8 @@ public class Traversable
     {
         return description;
     }
+
+    public String getTraversableActionString() { return traversableActionString; }
 
     public List<String> getRequiredItemIds()
     {

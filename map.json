@@ -9,6 +9,7 @@
           "toAreaId": "lonely_hideout",
           "traversableName": "Wooden Door",
           "description": "An old wooden door",
+          "traversableActionString": "You open the door and go through.",
           "requiredItemIds": []
         }
       ]
@@ -20,12 +21,14 @@
           "toAreaId": "candle_room",
           "traversableName": "Metal Door",
           "description": "A shiny metal door",
+          "traversableActionString": "The handle of the door is ice cold. You pull it open and go through.",
           "requiredItemIds": []
         },
         {
           "toAreaId": "dusty_cave",
           "traversableName": "Ladder",
           "description": "A wooden ladder",
+          "traversableActionString": "The ladder creaks as you begin to ascend. You pull yourself up.",
           "requiredItemIds": ["hidden_key"]
         }
       ]
@@ -37,6 +40,7 @@
           "toAreaId": "lonely_hideout",
           "traversableName": "Hatch",
           "description": "A hatch in the ground",
+          "traversableActionString": "You pull the hatch open and jump down.",
           "requiredItemIds": ["hidden_key"]
         }
       ]

@@ -68,7 +68,7 @@ public class World
     }
 
     public void goToArea(Traversable traversable) {
-        World.print("\nYou go through ", traversable.getTraversableName(), "\n");
+        World.print("\n", traversable.getTraversableActionString(), "\n");
         currPlayerAreaId = traversable.getToAreaId();
         Area area = areaIdToArea.get(currPlayerAreaId);
         describeArea(area);
