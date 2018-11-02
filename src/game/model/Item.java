@@ -7,13 +7,15 @@ public class Item
     private String id;
     private String description;
     private Boolean pickupable;
+    private String inRoomDescription;
     private List<String> action_triggers;
 
-    public Item(String id, String description, Boolean pickupable, List<String> actionTriggers)
+    public Item(String id, String description, Boolean pickupable, String inRoomDescription, List<String> actionTriggers)
     {
         this.id = id;
         this.description = description;
         this.pickupable = pickupable;
+        this.inRoomDescription = inRoomDescription;
         this.action_triggers = actionTriggers;
     }
 
@@ -26,6 +28,8 @@ public class Item
     {
         return description;
     }
+
+    String getInRoomDescription() { return inRoomDescription; }
 
     public Boolean getPickupable()
     {

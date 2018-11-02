@@ -4,7 +4,7 @@
     {
     "id": "candle_room",
     "name": "The Candle Room",
-    "description": "The room is empty except for a candle. You can see a doorway.",
+    "description": "The room is very plain and mostly empty.",
     "itemIds": [
       "candle_stick"
     ]
@@ -12,7 +12,7 @@
     {
     "id": "lonely_hideout",
     "name": "The Lonely Hideout",
-    "description": "You see an empty bedroll and a dead campfire. You see a hole in the ground in the corner of the room.",
+    "description": "The room smells like popcorn, but you only see a table without a microwave.. How concerning.",
     "itemIds": [
       "bedroll",
       "hidden_key"

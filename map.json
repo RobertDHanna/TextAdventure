@@ -10,6 +10,7 @@
           "traversableName": "Wooden Door",
           "description": "An old wooden door",
           "traversableActionString": "You open the door and go through.",
+          "inRoomDescription": "You can see a Wooden Door.",
           "requiredItemIds": []
         }
       ]
@@ -19,16 +20,18 @@
       "traversables": [
         {
           "toAreaId": "candle_room",
-          "traversableName": "Metal Door",
+          "traversableName": "Wooden Door",
           "description": "A shiny metal door",
           "traversableActionString": "The handle of the door is ice cold. You pull it open and go through.",
+          "inRoomDescription": "You see a Wooden Door leading to a room with a candle.",
           "requiredItemIds": []
         },
         {
           "toAreaId": "dusty_cave",
           "traversableName": "Ladder",
           "description": "A wooden ladder",
-          "traversableActionString": "The ladder creaks as you begin to ascend. You pull yourself up.",
+          "traversableActionString": "The ladder creaks as you begin to ascend. You pull yourself up and come through a Hatch.",
+          "inRoomDescription": "There is an old wooden Ladder that seems to go up forever.",
           "requiredItemIds": ["hidden_key"]
         }
       ]
@@ -41,6 +44,7 @@
           "traversableName": "Hatch",
           "description": "A hatch in the ground",
           "traversableActionString": "You pull the hatch open and jump down.",
+          "inRoomDescription": "There is a Hatch on the ground with a wooden Ladder leading down to The Lonely Hideout.",
           "requiredItemIds": ["hidden_key"]
         }
       ]

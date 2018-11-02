@@ -1,5 +1,6 @@
 package game.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Area
@@ -111,17 +112,17 @@ public class Area
 
     private void handleLook() {
         world.describeArea(this);
-        StringBuilder sb = new StringBuilder();
-        sb.append("\nYou see: a ");
-        List<Traversable> traversables = world.getTraversables(id);
-        for (Traversable traversable : traversables) {
-            sb.append(traversable.getTraversableName() + ", a ");
-        }
-        String trimmed = sb.substring(0, sb.toString().length() - 4);
-        World.print(trimmed + ".\n");
     }
 
     public void setWorld(World world) {
         this.world = world;
+    }
+
+    public List<Item> getItems() {
+        List<Item> items = new ArrayList<>();
+        for (String itemId : itemIds) {
+            items.add(Model.getInstance().getItem(itemId));
+        }
+        return items;
     }
 }

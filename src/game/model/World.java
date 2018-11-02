@@ -76,6 +76,15 @@ public class World
 
     public void describeArea(Area area) {
         World.print("\n", area.getName(),"\n");
-        World.print("\n", area.getDescription(), "\n");
+        World.print("\n", area.getDescription());
+        List<Item> items = area.getItems();
+        for (Item item : items) {
+            World.print(" " + item.getInRoomDescription());
+        }
+        World.print("\n");
+        for (Traversable traversable : getTraversables(area.getId())) {
+            World.print(traversable.getInRoomDescription() + " ");
+        }
+        World.print("\n");
     }
 }
