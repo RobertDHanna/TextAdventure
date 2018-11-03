@@ -11,9 +11,7 @@ import java.io.IOException;
 *
  */
 
-public class Model {
-    /*Our Model class instance**/
-    private static Model instance;
+public class Model implements IModel {
     /*This variable holds all the areas from the areas.json file**/
     private AreaList listOfAreas;
     /*This variable holds all items in the game from the items.json file**/

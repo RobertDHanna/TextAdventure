@@ -12,7 +12,7 @@ public class World
     private Map<String, Item> itemIdToItem;
     private Map<String, List<Traversable>> areaIdToTraversables;
 
-    public World(Model model)
+    public World(IModel model)
     {
         this.map = model.getMap();
         this.player = new Player();

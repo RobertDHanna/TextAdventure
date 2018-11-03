@@ -107,7 +107,7 @@ public class Area
             World.print("There seems to be no description for this object\n");
         }
         else {
-            World.print(myItem.getDescription());
+            World.print(myItem.getDescription(), "\n");
         }
     }
 
