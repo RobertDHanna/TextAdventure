@@ -76,8 +76,7 @@ public class Area
             case "pickup":
                 if (inputList.size() != 2) {
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                    "Usage %s %s", inputList.size(),
-                            "|" + "pickup|", "|" + "\'item\'|\n"));
+                                    "Usage: %s", inputList.size(), Help.PICKUP_USAGE));
                 }
                     handlePickup(inputList.get(1));
                     break;
