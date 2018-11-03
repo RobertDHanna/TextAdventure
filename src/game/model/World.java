@@ -87,4 +87,8 @@ public class World
         }
         World.print("\n");
     }
+
+    public Player getPlayer() {
+        return player;
+    }
 }

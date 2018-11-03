@@ -46,10 +46,10 @@ public class Area
         }
         switch (inputList.get(0).toLowerCase()) {
             case "go":
-                if (inputList.size() < 2){
+                if (inputList.size() < 2) {
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                    "Usage %s %s",inputList.size(),
-                            "|"+"go|","|"+"\'area\'|\n"));
+                                    "Usage %s %s", inputList.size(),
+                            "|" + "go|", "|" + "\'area\'|\n"));
                     break;
                 }
                 inputList.remove(0);
@@ -57,10 +57,10 @@ public class Area
                 break;
             case "inspect":
                 //World.print("Inspect command recognized.\n");
-                if (inputList.size() != 2){
+                if (inputList.size() != 2) {
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                              "Usage %s %s",inputList.size(),
-                                             "|"+"inspect|","|"+"\'item\'|\n"));
+                                    "Usage %s %s", inputList.size(),
+                            "|" + "inspect|", "|" + "\'item\'|\n"));
                     break;
                 }
                 handleInspect(inputList.get(1));
@@ -68,6 +68,14 @@ public class Area
             case "look":
                 handleLook();
                 break;
+            case "pickup":
+                if (inputList.size() != 2) {
+                    World.print(String.format("Incorrect number of arguments: %d\n" +
+                                    "Usage %s %s", inputList.size(),
+                            "|" + "pickup|", "|" + "\'item\'|\n"));
+                    handlePickup(inputList.get(1));
+                    break;
+                }
         }
     }
     /*This method verifies that the string passed in is an action trigger for an item in the current room and
@@ -108,9 +116,24 @@ public class Area
         }
     }
 
+    private void handlePickup(String trigger) {
+        String itemStr = verifyTriggers(trigger,getItemIds());
+        Item myItem = Model.getInstance().getItem(itemStr);
+        if(myItem == null){
+            World.print(String.format("No such item \'%s\' in this area\n",trigger));
+        }
+        else if(myItem.getDescription().isEmpty()){
+            World.print("There seems to be no description for this object\n");
+        }
+        else{
+            world.getPlayer().addToInventory(myItem);
+            World.print(String.format("%s picked up!",myItem.getId()));
+        }
+
+    }
 
 
-    private void handleLook() {
+        private void handleLook() {
         world.describeArea(this);
     }
 
@@ -125,4 +148,6 @@ public class Area
         }
         return items;
     }
+
 }
+

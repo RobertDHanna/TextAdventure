@@ -81,6 +81,10 @@ public class Model {
     * @return String the id of the item whose trigger was passed in
     * **/
     String stringIsTrigger(String triggerStr, List<String> areaItemIDS){
-        return this.getItemList().findIDByTrigger(triggerStr,areaItemIDS);
+        String id = this.getItemList().findIDByTrigger(triggerStr,areaItemIDS);
+        if (id == null){
+            //TODO return itemid found in inventory
+        }
+        return null;
     }
 }
