@@ -104,6 +104,7 @@ public class Area
                 return;
             }
         }
+        world.print("I'm not sure where that is...\n");
     }
 
 
