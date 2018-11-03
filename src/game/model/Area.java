@@ -46,11 +46,11 @@ public class Area
         }
         switch (inputList.get(0).toLowerCase()) {
             case "go":
-            case "goto":
                 if (inputList.get(1) != null && inputList.get(1).equals("to")) {
                     inputList.remove(1);
                 }
-
+                // intentional fallthrough
+            case "goto":
                 if (inputList.size() < 2){
                     World.print(String.format("Incorrect number of arguments: %d\n" +
                                     "Usage: %s\n", inputList.size(), Help.GO_USAGE));
