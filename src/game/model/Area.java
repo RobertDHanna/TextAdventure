@@ -46,6 +46,11 @@ public class Area
         }
         switch (inputList.get(0).toLowerCase()) {
             case "go":
+            case "goto":
+                if (inputList.get(1) != null && inputList.get(1).equals("to")) {
+                    inputList.remove(1);
+                }
+
                 if (inputList.size() < 2){
                     World.print(String.format("Incorrect number of arguments: %d\n" +
                                     "Usage |go| |\'area\'|\n",inputList.size()));
@@ -55,6 +60,7 @@ public class Area
                 handleGo(String.join(" ", inputList));
                 break;
             case "inspect":
+            case "i":
                 //World.print("Inspect command recognized.\n");
                 if (inputList.size() != 2){
                     World.print(String.format("Incorrect number of arguments: %d\n" +
@@ -64,6 +70,7 @@ public class Area
                 handleInspect(inputList.get(1));
                 break;
             case "look":
+            case "l":
                 handleLook();
                 break;
         }
