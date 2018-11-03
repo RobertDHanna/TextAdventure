@@ -62,7 +62,7 @@ public class Area
             case "inspect":
             case "i":
                 //World.print("Inspect command recognized.\n");
-                if (inputList.size() != 2){
+                if (inputList.size() != 2) {
                     World.print(String.format("Incorrect number of arguments: %d\n" +
                                               "Usage: %s\n",inputList.size(), Help.INSPECT_USAGE));
                     break;
@@ -73,6 +73,14 @@ public class Area
             case "l":
                 handleLook();
                 break;
+            case "pickup":
+                if (inputList.size() != 2) {
+                    World.print(String.format("Incorrect number of arguments: %d\n" +
+                                    "Usage %s %s", inputList.size(),
+                            "|" + "pickup|", "|" + "\'item\'|\n"));
+                }
+                    handlePickup(inputList.get(1));
+                    break;
             case "help":
                 Help.handleHelp();
                 break;
@@ -85,7 +93,7 @@ public class Area
     * @return String The id of item whose trigger was passed in
     * **/
     private String verifyTriggers(String trigger,List<String> areaItemIDS) {
-        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS);
+        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS,world);
     }
 
 
@@ -117,9 +125,24 @@ public class Area
         world.print("I'm not sure where that is...\n");
     }
 
+    private void handlePickup(String trigger) {
+        String itemStr = verifyTriggers(trigger,getItemIds());
+        Item myItem = Model.getInstance().getItem(itemStr);
+        if(myItem == null){
+            World.print(String.format("No such item \'%s\' in this area\n",trigger));
+        }
+        else if(myItem.getDescription().isEmpty()){
+            World.print("There seems to be no description for this object\n");
+        }
+        else{
+            world.getPlayer().addToInventory(myItem);
+            World.print(String.format("%s picked up!",myItem.getId()));
+        }
+
+    }
 
 
-    private void handleLook() {
+        private void handleLook() {
         world.describeArea(this);
     }
 
@@ -134,4 +157,6 @@ public class Area
         }
         return items;
     }
+
 }
+
