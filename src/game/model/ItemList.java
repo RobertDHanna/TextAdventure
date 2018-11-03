@@ -16,7 +16,7 @@ public class ItemList {
     void setupItemList() {
         idToListOfTriggers = new HashMap<>();
         for (Item item : this.items) {
-            idToListOfTriggers.putIfAbsent(item.getId(),item.getAction_triggers());
+            idToListOfTriggers.putIfAbsent(item.getId(),item.getActionTriggers());
         }
     }
 

@@ -12,7 +12,7 @@ public class World
     private Map<String, Item> itemIdToItem;
     private Map<String, List<Traversable>> areaIdToTraversables;
 
-    public World(Model model)
+    public World(IModel model)
     {
         this.map = model.getMap();
         this.player = new Player();
@@ -90,5 +90,26 @@ public class World
 
     public Player getPlayer() {
         return player;
+    }
+
+    private String getItemIdByTrigger(String trigger, List<Item> items) {
+        for(Item i : items) {
+            if (i.getActionTriggers().contains(trigger)) {
+                return i.getId();
+            }
+        }
+        return null;
+    }
+
+    public String getItemIdByTrigger(String trigger) {
+        String id = getItemIdByTrigger(trigger, areaIdToArea.get(currPlayerAreaId).getItems());
+        if(id == null) {
+            id = getItemIdByTrigger(trigger, player.inventory);
+        }
+        return id;
+    }
+
+    public Item getItemById(String id) {
+        return itemIdToItem.get(id);
     }
 }

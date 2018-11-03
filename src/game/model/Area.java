@@ -91,14 +91,14 @@ public class Area
     * @param areaITemIDS The list of item ids for this area
     * @return String The id of item whose trigger was passed in
     * **/
-    private String verifyTriggers(String trigger,List<String> areaItemIDS) {
-        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS,world);
+    private String getItemIdByTrigger(String trigger) {
+        return world.getItemIdByTrigger(trigger.toLowerCase());
     }
 
 
     private void handleInspect(String trigger) {
-        String itemStr = verifyTriggers(trigger,getItemIds());
-        Item myItem = Model.getInstance().getItem(itemStr);
+        String itemStr = getItemIdByTrigger(trigger);
+        Item myItem = world.getItemById(itemStr);
 
         if(myItem == null){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
@@ -107,7 +107,7 @@ public class Area
             World.print("There seems to be no description for this object\n");
         }
         else {
-            World.print(myItem.getDescription());
+            World.print(myItem.getDescription(), "\n");
         }
     }
 
@@ -125,8 +125,8 @@ public class Area
     }
 
     private void handlePickup(String trigger) {
-        String itemStr = verifyTriggers(trigger,getItemIds());
-        Item myItem = Model.getInstance().getItem(itemStr);
+        String itemStr = getItemIdByTrigger(trigger);
+        Item myItem = world.getItemById(itemStr);
         if(myItem == null){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
         }
@@ -152,7 +152,7 @@ public class Area
     public List<Item> getItems() {
         List<Item> items = new ArrayList<>();
         for (String itemId : itemIds) {
-            items.add(Model.getInstance().getItem(itemId));
+            items.add(world.getItemById(itemId));
         }
         return items;
     }

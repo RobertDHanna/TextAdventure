@@ -8,7 +8,7 @@ public class Item
     private String description;
     private Boolean pickupable;
     private String inRoomDescription;
-    private List<String> action_triggers;
+    private List<String> actionTriggers;
 
     public Item(String id, String description, Boolean pickupable, String inRoomDescription, List<String> actionTriggers)
     {
@@ -16,7 +16,7 @@ public class Item
         this.description = description;
         this.pickupable = pickupable;
         this.inRoomDescription = inRoomDescription;
-        this.action_triggers = actionTriggers;
+        this.actionTriggers = actionTriggers;
     }
 
     String getId()
@@ -36,8 +36,8 @@ public class Item
         return pickupable;
     }
 
-    List<String> getAction_triggers()
+    List<String> getActionTriggers()
     {
-        return action_triggers;
+        return actionTriggers;
     }
 }
