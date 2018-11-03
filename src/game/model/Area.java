@@ -53,7 +53,7 @@ public class Area
 
                 if (inputList.size() < 2){
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                    "Usage |go| |\'area\'|\n",inputList.size()));
+                                    "Usage: %s\n", inputList.size(), Help.GO_USAGE));
                     break;
                 }
                 inputList.remove(0);
@@ -64,7 +64,7 @@ public class Area
                 //World.print("Inspect command recognized.\n");
                 if (inputList.size() != 2){
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                              "Usage |inspect| |\'item\'|\n",inputList.size()));
+                                              "Usage: %s\n",inputList.size(), Help.INSPECT_USAGE));
                     break;
                 }
                 handleInspect(inputList.get(1));
@@ -72,6 +72,9 @@ public class Area
             case "look":
             case "l":
                 handleLook();
+                break;
+            case "help":
+                Help.handleHelp();
                 break;
         }
     }
