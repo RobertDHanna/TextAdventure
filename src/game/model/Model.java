@@ -85,7 +85,7 @@ public class Model {
         if (id == null){
             List<Item> items = world.getPlayer().inventory;
             for (Item item : items) {
-                if(item.getAction_triggers().contains(triggerStr)){
+                if(item.getActionTriggers().contains(triggerStr)){
                     return item.getId();
                 }
             }
