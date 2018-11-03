@@ -73,9 +73,9 @@ public class Area
                     World.print(String.format("Incorrect number of arguments: %d\n" +
                                     "Usage %s %s", inputList.size(),
                             "|" + "pickup|", "|" + "\'item\'|\n"));
+                }
                     handlePickup(inputList.get(1));
                     break;
-                }
         }
     }
     /*This method verifies that the string passed in is an action trigger for an item in the current room and
@@ -85,7 +85,7 @@ public class Area
     * @return String The id of item whose trigger was passed in
     * **/
     private String verifyTriggers(String trigger,List<String> areaItemIDS) {
-        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS);
+        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS,world);
     }
 
 
