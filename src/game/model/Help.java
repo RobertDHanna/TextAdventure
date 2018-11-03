@@ -7,12 +7,14 @@ public class Help {
     public static String GO_USAGE = "go <area>";
     public static String INSPECT_USAGE = "inspect <item>";
     public static String LOOK_USAGE = "look";
+    public static String PICKUP_USAGE = "pickup <item>";
 
     public static void handleHelp() {
         World.print(
             GO_USAGE, " - go to area\n",
             INSPECT_USAGE, " - inspect an item\n",
             LOOK_USAGE, " - look at the area you're in\n",
+            PICKUP_USAGE, " - pick up an item",
             "help - print this helpful message again!\n"
         );
     }
