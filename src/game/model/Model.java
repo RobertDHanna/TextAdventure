@@ -73,24 +73,4 @@ public class Model {
         return this.getItemList().getItem(itemID);
     }
 
-    /*
-    * Returns the ID of an item that was found by it's trigger whether in the room or in the player's inventory
-    * @param triggerStr The supposed trigger
-    * @param areaIItemIDS The ids of items that are associated with a given areas
-    * @return String the id of the item whose trigger was passed in
-    * **/
-    String stringIsTrigger(String triggerStr, List<String> areaItemIDS,World world){
-        String id = this.getItemList().findIDByTrigger(triggerStr,areaItemIDS);
-        //look in the inventory
-        if (id == null){
-            List<Item> items = world.getPlayer().inventory;
-            for (Item item : items) {
-                if(item.getActionTriggers().contains(triggerStr)){
-                    return item.getId();
-                }
-            }
-            return null;
-        }
-        return id;
-    }
 }

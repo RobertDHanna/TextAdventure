@@ -91,13 +91,13 @@ public class Area
     * @param areaITemIDS The list of item ids for this area
     * @return String The id of item whose trigger was passed in
     * **/
-    private String verifyTriggers(String trigger,List<String> areaItemIDS) {
-        return Model.getInstance().stringIsTrigger(trigger.toLowerCase(),areaItemIDS,world);
+    private String getItemIdByTrigger(String trigger) {
+        return world.getItemIdByTrigger(trigger.toLowerCase());
     }
 
 
     private void handleInspect(String trigger) {
-        String itemStr = verifyTriggers(trigger,getItemIds());
+        String itemStr = getItemIdByTrigger(trigger);
         Item myItem = Model.getInstance().getItem(itemStr);
 
         if(myItem == null){
@@ -125,7 +125,7 @@ public class Area
     }
 
     private void handlePickup(String trigger) {
-        String itemStr = verifyTriggers(trigger,getItemIds());
+        String itemStr = getItemIdByTrigger(trigger);
         Item myItem = Model.getInstance().getItem(itemStr);
         if(myItem == null){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
