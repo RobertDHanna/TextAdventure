@@ -108,4 +108,8 @@ public class World
         }
         return id;
     }
+
+    public Item getItemById(String id) {
+        return itemIdToItem.get(id);
+    }
 }

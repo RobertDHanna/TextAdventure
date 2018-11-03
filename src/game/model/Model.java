@@ -3,7 +3,6 @@ package game.model;
 import game.encode.Encoder;
 
 import java.io.IOException;
-import java.util.List;
 
 /*
 *
@@ -22,18 +21,8 @@ public class Model {
     /*This variable holds the map object from the map.json file**/
     private GameMap map;
 
-    /*Get an instance of the model
-    * This makes it so we only ever have one instance of the model class
-    * **/
-    public static Model getInstance() {
-        if (instance == null) {
-            instance = new Model();
-        }
-        return instance;
-    }
-
     /**Creation of model data starts here*/
-    private Model() {
+    public Model() {
         try {
             setupModelData();
         } catch (Exception e) {
@@ -63,14 +52,4 @@ public class Model {
     public GameMap getMap() {
         return map;
     }
-
-
-    /*Returns a item that is tied to a given ID*
-    * @param itemID the ID of the item we want
-    * @return The required Item object, or null if nothing is found
-    * */
-    Item getItem(String itemID){
-        return this.getItemList().getItem(itemID);
-    }
-
 }

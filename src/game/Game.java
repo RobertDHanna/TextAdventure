@@ -13,7 +13,7 @@ import java.io.InputStreamReader;
 public class Game
 {
     public static void main(String[] args) {
-        World world = new World(Model.getInstance());
+        World world = new World(new Model());
         run(world);
     }
 

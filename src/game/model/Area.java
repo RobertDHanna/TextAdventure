@@ -98,7 +98,7 @@ public class Area
 
     private void handleInspect(String trigger) {
         String itemStr = getItemIdByTrigger(trigger);
-        Item myItem = Model.getInstance().getItem(itemStr);
+        Item myItem = world.getItemById(itemStr);
 
         if(myItem == null){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
@@ -126,7 +126,7 @@ public class Area
 
     private void handlePickup(String trigger) {
         String itemStr = getItemIdByTrigger(trigger);
-        Item myItem = Model.getInstance().getItem(itemStr);
+        Item myItem = world.getItemById(itemStr);
         if(myItem == null){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
         }
@@ -152,7 +152,7 @@ public class Area
     public List<Item> getItems() {
         List<Item> items = new ArrayList<>();
         for (String itemId : itemIds) {
-            items.add(Model.getInstance().getItem(itemId));
+            items.add(world.getItemById(itemId));
         }
         return items;
     }
