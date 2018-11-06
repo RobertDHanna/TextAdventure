@@ -100,6 +100,9 @@ public class Area
         for ( Item item : player.inventory){
             answer.append(String.format("%s - %s\n",item.getName(), item.getDescription()));
         }
+        if (player.inventory.size() == 0){
+            answer.append("Is Empty!\n");
+        }
 
         World.print(answer.toString());
     }
