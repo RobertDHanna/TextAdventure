@@ -75,6 +75,7 @@ public class World
     }
 
     public void describeArea(Area area) {
+        World.print("\n**************************************************************\n");
         World.print("\n", area.getName(),"\n");
         World.print("\n", area.getDescription());
         List<Item> items = area.getItems();
@@ -86,6 +87,7 @@ public class World
             World.print(traversable.getInRoomDescription() + " ");
         }
         World.print("\n");
+        World.print("\n**************************************************************\n");
     }
 
     public Player getPlayer() {

@@ -14,7 +14,7 @@ class EncoderTest {
 
     @Test
     void encode() {
-        Item item = new Item("1","stuff",true,"I'm in a room", Arrays.asList("it","buy","do"));
+        Item item = new Item("1", "Stuff","stuff",true,"I'm in a room", Arrays.asList("it","buy","do"));
         String str = en.encode(item);
     }
 

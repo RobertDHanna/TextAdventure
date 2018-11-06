@@ -2,6 +2,7 @@
   "items": [
     {
       "id": "candle_stick",
+      "name": "Candle",
       "description": "just an ordinary candle stick",
       "pickupable": true,
       "inRoomDescription": "There is a candle stick lying on the ground. It seems to have a slight glow although it is not lit.",
@@ -11,6 +12,7 @@
     },
     {
       "id": "bedroll",
+      "name": "Bedroll",
       "description": "You look inside the bed and find a mysterious key...",
       "pickupable": false,
       "inRoomDescription": "Although covered in dirt, you notice an empty bedroll at your feet.",
@@ -21,6 +23,7 @@
     },
     {
       "id": "hidden_key",
+      "name": "Strange Key",
       "description": "The key is in the shape of a pumpkin ...",
       "pickupable": true,
       "inRoomDescription": "On the table you see an odd looking key.",

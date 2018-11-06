@@ -4,8 +4,8 @@ import java.util.List;
 
 public class Equipment extends Item {
 
-    public Equipment(String id, String description, Boolean pickupable, String inRoomDescription, List<String> actionTriggers) {
-        super(id, description, pickupable, inRoomDescription, actionTriggers);
+    public Equipment(String id, String name, String description, Boolean pickupable, String inRoomDescription, List<String> actionTriggers) {
+        super(id, name, description, pickupable, inRoomDescription, actionTriggers);
     }
 
     public enum Bonus {

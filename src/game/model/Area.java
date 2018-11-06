@@ -135,7 +135,7 @@ public class Area
         }
         else{
             world.getPlayer().addToInventory(myItem);
-            World.print(String.format("%s picked up!",myItem.getId()));
+            World.print(String.format("%s picked up!\n",myItem.getName()));
         }
 
     }
