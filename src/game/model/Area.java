@@ -83,8 +83,27 @@ public class Area
             case "help":
                 Help.handleHelp();
                 break;
+            case "inventory":
+            case "inv":
+                if (inputList.size() != 1) {
+                    World.print(String.format("Incorrect number of arguments: %d\n" +
+                            "Usage: %s", inputList.size(), Help.INVENTORY));
+                }
+                handleInventory();
+                break;
         }
     }
+
+    private void handleInventory() {
+        Player player = world.getPlayer();
+        StringBuilder answer = new StringBuilder("YOUR INVENTORY:\n");
+        for ( Item item : player.inventory){
+            answer.append(String.format("%s - %s\n",item.getName(), item.getDescription()));
+        }
+
+        World.print(answer.toString());
+    }
+
     /*This method verifies that the string passed in is an action trigger for an item in the current room and
     * then returns that item id
     * @param trigger The string that might correspond to an item's action trigger
