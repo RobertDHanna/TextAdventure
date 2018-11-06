@@ -46,7 +46,7 @@ public class Area
         }
         switch (inputList.get(0).toLowerCase()) {
             case "go":
-                if (inputList.get(1) != null && inputList.get(1).equals("to")) {
+                if (inputList.size() > 1 && inputList.get(1).equals("to")) {
                     inputList.remove(1);
                 }
                 // intentional fallthrough
