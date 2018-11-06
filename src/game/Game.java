@@ -1,6 +1,7 @@
 package game;
 
 import game.model.Model;
+import game.model.Player;
 import game.model.World;
 
 import java.io.BufferedReader;
@@ -13,12 +14,12 @@ import java.io.InputStreamReader;
 public class Game
 {
     public static void main(String[] args) {
-        World world = new World(new Model());
+        World world = new World(new Model(), new Player());
         run(world);
     }
 
     private static void run(World world) {
-        World.print(world.getStartingWorldDialog());
+        world.printStartingWorldDialog();
         while (true) {
             BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
             String input = "";

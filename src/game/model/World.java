@@ -12,10 +12,10 @@ public class World
     private Map<String, Item> itemIdToItem;
     private Map<String, List<Traversable>> areaIdToTraversables;
 
-    public World(IModel model)
+    public World(IModel model, Player player)
     {
         this.map = model.getMap();
-        this.player = new Player();
+        this.player = player;
         this.currPlayerAreaId = this.map.getStartAreaId();
 
         Map<String, Area> areaIdToArea = new HashMap<>();
@@ -39,22 +39,19 @@ public class World
 
     public void handleInput(String input) {
         List<String> actionList = new ArrayList<>(Arrays.asList(input.split("\\s+")))
-                .stream().filter(action -> action.length() > 0)
+                .stream()
+                .filter(action -> action.length() > 0)
                 .map(action -> action.trim())
                 .collect(Collectors.toList());
         areaIdToArea.get(this.currPlayerAreaId).handleAction(actionList);
-    }
-
-    public void handlePlayerMove(String AreaId) {
-
     }
 
     public String getCurrentPlayerAreaDescription() {
         return areaIdToArea.get(this.currPlayerAreaId).getDescription();
     }
 
-    public String getStartingWorldDialog() {
-        return "Welcome to the game!\n";
+    public void printStartingWorldDialog() {
+        World.print("Welcome to the game!\n");
     }
 
     public static void print(String... printables) {
@@ -80,11 +77,11 @@ public class World
         World.print("\n", area.getDescription());
         List<Item> items = area.getItems();
         for (Item item : items) {
-            World.print(" " + item.getInRoomDescription());
+            World.print(" ", item.getInRoomDescription());
         }
         World.print("\n");
         for (Traversable traversable : getTraversables(area.getId())) {
-            World.print(traversable.getInRoomDescription() + " ");
+            World.print(traversable.getInRoomDescription(), " ");
         }
         World.print("\n");
         World.print("\n**************************************************************\n");

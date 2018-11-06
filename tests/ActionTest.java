@@ -1,5 +1,6 @@
 import game.model.IModel;
 import game.model.Model;
+import game.model.Player;
 import game.model.World;
 import org.junit.jupiter.api.*;
 
@@ -116,7 +117,7 @@ class ActionTest {
                     "       }" +
                     "   ]" +
                     "}");
-            world = new World(model);
+            world = new World(model, new Player());
         } catch (Exception e) {
             e.printStackTrace();
             fail();
@@ -182,7 +183,7 @@ class ActionTest {
         assertNotEquals(world.getCurrentPlayerAreaDescription(), lastDescription);
         assertTrue(newStream.getResponse().contains("The Candle Room"));
         assertTrue(newStream.getResponse().contains("The room is very plain and mostly empty."));
-        assertTrue(newStream.getResponse().contains(" There is a candle stick lying on the ground. It seems to have a slight glow although it is not lit."));
+        assertTrue(newStream.getResponse().contains("There is a candle stick lying on the ground. It seems to have a slight glow although it is not lit."));
     }
 
     @Test
