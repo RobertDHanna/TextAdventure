@@ -329,7 +329,7 @@
           "requiredItemIds": []
         },
         {
-          "toAreaId": "grass_overlook",
+          "toAreaId": "grassy_overlook",
           "traversableName": "South Path",
           "description": "An uphill path. You'd be grumpy about the idea, but you want to see where it leads.",
           "traversableActionString": "You begin your trek upwards. This trail takes over half an hour as you wind around a steep cliff. You're a bit winded as you reach a new clearing.",
@@ -400,6 +400,10 @@
           "requiredItemIds": []
         }
       ]
+    },
+    {
+      "areaId": "shrine",
+      "traversables": []
     }
   ]
 }

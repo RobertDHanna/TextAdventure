@@ -2,7 +2,7 @@
   "id": "original_bedroom",
   "name": "Your Bedroom",
   "description": "This is your bedroom, obviously. There's a comfortable looking bed.",
-  "itemIds": ["hidden_rock", "bedroom_letter", "television", "nightstand"]
+  "itemIds": ["hidden_rock", "nightstand", "television", "bedroom_letter"]
 },
   {
     "id": "original_kitchen",

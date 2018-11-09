@@ -2,6 +2,7 @@ package game.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 
 public class Area
 {
@@ -74,12 +75,14 @@ public class Area
                 handleLook();
                 break;
             case "pickup":
+            case "take":
                 if (inputList.size() != 2) {
                     World.print(String.format("Incorrect number of arguments: %d\n" +
-                                    "Usage: %s", inputList.size(), Help.PICKUP_USAGE));
-                }
-                    handlePickup(inputList.get(1));
+                                    "Usage: %s\n", inputList.size(), Help.PICKUP_USAGE));
                     break;
+                }
+                handlePickup(inputList.get(1));
+                break;
             case "help":
                 Help.handleHelp();
                 break;
@@ -91,7 +94,13 @@ public class Area
                 }
                 handleInventory();
                 break;
+            default:
+                this.printUnknownCommand();
         }
+    }
+
+    private void printUnknownCommand() {
+        World.print("I don't understand what you mean...", "\n");
     }
 
     private void handleInventory() {
@@ -146,17 +155,35 @@ public class Area
         world.print("I'm not sure where that is...\n");
     }
 
+    private boolean isItemInArea(Item item) {
+        for(String itemId : itemIds) {
+            if(Objects.equals(item.getId(), itemId)) {
+                return true;
+            }
+        }
+        return false;
+    }
+
     private void handlePickup(String trigger) {
         String itemStr = getItemIdByTrigger(trigger);
         Item myItem = world.getItemById(itemStr);
-        if(myItem == null){
+        if(myItem == null || !isItemInArea(myItem)){
             World.print(String.format("No such item \'%s\' in this area\n",trigger));
         }
         else if(myItem.getDescription().isEmpty()){
             World.print("There seems to be no description for this object\n");
-        }
-        else{
+        } else if(!myItem.getPickupable()) {
+            World.print(String.format("You can't pick up %s!", myItem.getName()), "\n");
+        } else {
             world.getPlayer().addToInventory(myItem);
+
+            for(int i = 0; i < itemIds.size(); i++) {
+                String itemId = itemIds.get(i);
+                if(Objects.equals(itemId, myItem.getId())) {
+                    itemIds.remove(i);
+                    break;
+                }
+            }
             World.print(String.format("%s picked up!\n",myItem.getName()));
         }
 
