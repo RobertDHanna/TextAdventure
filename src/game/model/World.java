@@ -51,7 +51,9 @@ public class World
     }
 
     public void printStartingWorldDialog() {
-        World.print("Welcome to the game!\n");
+        World.print("You wake up on the cold stone floor of a prison cell. The air smells damp and musty, and you can hear muffled sounds from the floors above. You can't quite remember how you got here; just that you got a pretty good whack on the head and it's still throbbing. You start to look around your cell. There must be some way out of here...","\n",
+                "\n",
+                "Welcome to $GameNameHere! Type 'help' at anytime for a list of available commands.", "\n\n");
     }
 
     public static void print(String... printables) {

@@ -1,0 +1,266 @@
+{"items":[
+  {
+    "id": "hidden_rock",
+    "name": "Coolest Rock",
+    "description": "It's a really cool rock",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["rock"]
+  },
+  {
+    "id": "bedroom_letter",
+    "name": "Bedroom Letter",
+    "description": "The letter reads 'Running some errands! Good luck today. -Mrs. Wife'",
+    "pickupable": false,
+    "inRoomDescription": "A letter rests on one of your nightstands.",
+    "actionTriggers": ["letter"]
+  },
+  {
+    "id": "television",
+    "name": "Telly",
+    "description": "A $200 plasma tv. You hung it on the wall yourself! Sometimes, you could just stand there and watch television for hours.",
+    "pickupable": false,
+    "inRoomDescription": "A TV is set up across from your bed.",
+    "actionTriggers": ["tv", "television"]
+  },
+  {
+    "id": "fridge",
+    "name": "Fridge",
+    "description": "Definitely a fridge. There are casserole leftovers, an apple, and an energy drink inside. Maybe it's time to do some grocery shopping.",
+    "pickupable": false,
+    "inRoomDescription": "A fridge stands next to your counters.",
+    "actionTriggers": ["fridge", "refrigerator"]
+  },
+  {
+    "id": "vase",
+    "name": "Pronounced Vahs",
+    "description": "The vase holds a lovely arrangement of flowers. You see rhododendrons, petunias, tansies, and one strikingly beautiful black rose. You didn't realize you knew so many flowers.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["vase", "flowers"]
+  },
+  {
+    "id": "damaged_books",
+    "name": "Book Heap",
+    "description": "Despite the pile being soggy with water, you notice the corner of a fresh, dry piece of paper sticking out of the pile.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["books", "book"]
+  },
+  {
+    "id": "hidden_books_note",
+    "name": "Forbidden Note",
+    "description": "You pull the note from the pile. The page is utterly blank. The hand that touched the note falls numb, and you double over, overcome with intense sobbing. You are pressed down to the ground by an extreme force, as if you were a bug being slowly squished. Then, as if nothing happened, you are standing in the entryway. The page is gone. Neat.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["note", "paper"]
+  },
+  {
+    "id": "skeleton",
+    "name": "Skellington",
+    "description": "What skeleton? (edit this out later: it disappears??)",
+    "pickupable": false,
+    "inRoomDescription": "A skeleton, picked clean to the bone, rests in a visible indentation on the mattress.",
+    "actionTriggers": ["skeleton", "corpse", "body"]
+  },
+  {
+    "id": "cupboard",
+    "name": "Cupboards",
+    "description": "Your cupboards are all locked. Of course, how could you forget. This is a cupboard locking household! What's inside? Who cares!",
+    "pickupable": false,
+    "inRoomDescription": "Several cupboards are above and below your countertop.",
+    "actionTriggers": ["cupboard", "cupboards"]
+  },
+  {
+    "id": "drawing",
+    "name": "Funky Art",
+    "description": "You never could understand modern art.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["mark", "drawing", "circle"]
+  },
+  {
+    "id": "drink",
+    "name": "Super Fast Drink Boy",
+    "description": "This brand claims to give you the raw physical energy of one hundred mountain lions. You've tried it before, it's true.",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["drink", "energy drink", "can"]
+  },
+  {
+    "id": "mush",
+    "name": "Nasty Paste",
+    "description": "Well, I am kind of hungry. I wonder...",
+    "pickupable": true,
+    "inRoomDescription": "An open fridge displays a pile of rotten mush that appears to have slid from the top shelves to the bottom, the fridge door rests on the floor.",
+    "actionTriggers": ["mold", "mush", "rotten mush"]
+  },
+  {
+    "id": "lamppost",
+    "name": "Lamppost",
+    "description": "Who put this here anyway? I don't see the point.",
+    "pickupable": false,
+    "inRoomDescription": "Lying on the ground besides the fingerpost is a charming electric lamppost that appears to have been torn out of the ground.",
+    "actionTriggers": ["lamppost", "lamp post", "lamp"]
+  },
+  {
+    "id": "cages",
+    "name": "Cages",
+    "description": "Booooooooooring, who cares! You can't even bring yourself to look that hard. Actually, it seems you are physically unable to look up. The body sure does some weird things sometimes! You notice a few tears rolling down your cheek; you wipe them away.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["cages", "cage"]
+  },
+  {
+    "id": "nightstand",
+    "name": "Nightstands",
+    "description": "These are great at holding things.",
+    "pickupable": false,
+    "inRoomDescription": "Two nightstands sit on each side of the bed.",
+    "actionTriggers": ["nightstand", "table"]
+  },
+  {
+    "id": "oven",
+    "name": "Oven",
+    "description": "What legendary meals has this beast created?",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["oven"]
+  },
+  {
+    "id": "kitchen_letter",
+    "name": "Kitchen Letter",
+    "description": "This lovely letter from your beloved reads 'Fuel up bro!!! - Boo Bear Sr.'",
+    "pickupable": false,
+    "inRoomDescription": "There is a note on the table.",
+    "actionTriggers": ["note", "letter"]
+  },
+  {
+    "id": "apple",
+    "name": "Apple",
+    "description": "You haven't seen a doctor in years thanks to these bad boys.",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["apple", "fruit"]
+  },
+  {
+    "id": "casserole",
+    "name": "Legendary Casserole",
+    "description": "A legendary meal for a legendary… what are you anyway?",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["casserole", "food"]
+  },
+  {
+    "id": "normal_books",
+    "name": "Books",
+    "description": "You've got some classics here, like Already-Solved Crossword Puzzles, How to Become a Fancy Waiter in Less than 20 Minutes, and A Coffee Table Book About Coffee Tables.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["books", "book"]
+  },
+  {
+    "id": "sword",
+    "name": "Sword",
+    "description": "Serves a variety of purposes, but is typically used in the stabbing business.",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["sword"]
+  },
+  {
+    "id": "shield",
+    "name": "Shield",
+    "description": "She blocks well, and when she doesn't, you'll wish she did.",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["shield"]
+  },
+  {
+    "id": "hidden_outhouse_key",
+    "name": "Poop Key",
+    "description": "A diamond in the rough, a key in the outhouse. It smells.",
+    "pickupable": true,
+    "inRoomDescription": "",
+    "actionTriggers": ["key"]
+  },
+  {
+    "id": "outhouse",
+    "name": "Outhouse",
+    "description": "Your trusty outhouse, hasn't failed you yet. You've probably used it before.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["outhouse", "bathroom"]
+  },
+  {
+    "id": "house",
+    "name": "Ruined House",
+    "description": "These shambles seem to be a house abandoned by time.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["house", "home"]
+  },
+  {
+    "id": "markings",
+    "name": "Markings",
+    "description": "The crude canvas of cruel critters.",
+    "pickupable": false,
+    "inRoomDescription": "The walls are clumsily marked in an unrecognizable black matter.",
+    "actionTriggers": ["marking", "drawing", "walls", "black matter", "matter"]
+  },
+  {
+    "id": "cards",
+    "name": "Playing Cards",
+    "description": "They're literally all aces. Every card is an ace. What were they playing?",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": [""]
+  },
+  {
+    "id": "fabric",
+    "name": "Layered sheets",
+    "description": "These are layered and bundled in such a fashion that it appears to be their resting area. It smells.",
+    "pickupable": false,
+    "inRoomDescription": "Several sheets of fabric layered across each other cover one corner of the room.",
+    "actionTriggers": ["sheets", "fabric", "bedding"]
+  },
+  {
+    "id": "junk_pile",
+    "name": "Junk Pile",
+    "description": "There's so much garbage… could something actually useful be underneath?",
+    "pickupable": false,
+    "inRoomDescription": "A pile of the junk seems to have been growing along one of the walls.",
+    "actionTriggers": ["pile", "junk pile", "junk"]
+  },
+  {
+    "id": "root_chair",
+    "name": "Chair of Root",
+    "description": "The dedication to their aesthetic is impressive. Still, it doesn't look too comfortable.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["chair", "roots"]
+  },
+  {
+    "id": "tree",
+    "name": "Great Tree",
+    "description": "For a brief moment, you remember climbing trees as a kid, conquering taller and taller feats with your friends, knowing what it means to be happy. What was I thinking about again?",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["tree"]
+  },
+  {
+    "id": "basin",
+    "name": "Basin",
+    "description": "The water within is sparkling clear. You instinctively leap to drink from it, and you feel more refreshed than you can ever remember being. You don't actually remember much, but you think it is still quite special.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["basin", "water", "fountain"]
+  },
+  {
+    "id": "tangles",
+    "name": "Tangles of Vines",
+    "description": "Several tangles of vine sway above your head. They vary in size, but you notice they are all about as big as you are. Two of them are oozing, forming small puddles of green and red on the ground.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["tangles", "vines", "cocoons"]
+  }
+]}

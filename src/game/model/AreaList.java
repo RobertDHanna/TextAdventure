@@ -1,7 +1,7 @@
 package game.model;
 
 import java.util.List;
-/*Holds the list of areas from the areas.json file
+/*Holds the list of areas from the w1-areas.json file
 *
 * **/
 public class AreaList {

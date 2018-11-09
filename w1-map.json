@@ -1,0 +1,405 @@
+{
+  "startAreaId": "original_bedroom",
+  "endAreaId": "shrine",
+  "connectionList": [
+    {
+      "areaId": "original_bedroom",
+      "traversables": [
+        {
+          "toAreaId": "original_kitchen",
+          "traversableName": "South Door",
+          "description": "A plain wooden door",
+          "traversableActionString": "You open the door and step through.",
+          "inRoomDescription": "There is a South Door.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "original_entryway",
+          "traversableName": "East Door",
+          "description": "A plain wooden door",
+          "traversableActionString": "You open the door and step through.",
+          "inRoomDescription": "There is an East Door.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "original_kitchen",
+      "traversables": [
+        {
+          "toAreaId": "original_bedroom",
+          "traversableName": "North Door",
+          "description": "A plain wooden door",
+          "traversableActionString": "You open the door and step through.",
+          "inRoomDescription": "The North Door returns to the bedroom.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "original_entryway",
+      "traversables": [
+        {
+          "toAreaId": "original_bedroom",
+          "traversableName": "West Door",
+          "description": "A plain wooden door",
+          "traversableActionString": "You open the door and step through.",
+          "inRoomDescription": "There is a square West Door.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "yard",
+          "traversableName": "South Door",
+          "description": "A rounded wooden door",
+          "traversableActionString": "You open the door, stepping out to feel fresh wind and sunlight that is certainly natural.",
+          "inRoomDescription": "There is a rounded South Door",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "yard",
+      "traversables": [
+        {
+          "toAreaId": "crow_nest",
+          "traversableName": "South Path",
+          "description": "A grassy path.",
+          "traversableActionString": "You continue along, further away from the comforts of your yard.",
+          "inRoomDescription": "A South Path leads further into the forest.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "ruined_entryway",
+          "traversableName": "Open Doorway",
+          "description": "A door once stood here, probably.",
+          "traversableActionString": "You carefully step into the ancient building.",
+          "inRoomDescription": "An Open Doorway leads into the house.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "ruined_entryway",
+      "traversables": [
+        {
+          "toAreaId": "ruined_bedroom",
+          "traversableName": "Warped Door",
+          "description": "It is an extremely water damaged door.",
+          "traversableActionString": "You pull the door open, and it managed to stay connected to the wall. You walk through.",
+          "inRoomDescription": "To the west is an ancient Warped Door that is surprisingly still standing, despite being warped from years of water damage.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "yard",
+          "traversableName": "Open Doorway",
+          "description": "A door once stood here, probably",
+          "traversableActionString": "You carefully step out of the ancient building.",
+          "inRoomDescription": "To the south is an Open Doorway to the yard.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "ruined_bedroom",
+      "traversables": [
+        {
+          "toAreaId": "ruined_kitchen",
+          "traversableName": "Torn Wall",
+          "description": "This hole in the wall lets you peak or cross into the kitchen.",
+          "traversableActionString": "You clamber through the hole in the wall.",
+          "inRoomDescription": "A Torn Wall allows passage further into the building.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "ruined_entryway",
+          "traversableName": "Warped Door",
+          "description": "It is an extremely water damaged door.",
+          "traversableActionString": "You pull the door open, and it managed to stay connected to the wall. You walk through.",
+          "inRoomDescription": "To the east is a Warped Door warped from years of water damage.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "ruined_kitchen",
+      "traversables": [
+        {
+          "toAreaId": "ruined_bedroom",
+          "traversableName": "Torn Wall",
+          "description": "This hole in the wall lets you peak or cross into the bedroom.",
+          "traversableActionString": "You clamber through the hole in the wall.",
+          "inRoomDescription": "The wall to the north is the Torn Wall that you passed through.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "crow_nest",
+      "traversables": [
+        {
+          "toAreaId": "yard",
+          "traversableName": "North Path",
+          "description": "A grassy path.",
+          "traversableActionString": "You return to the comfort of your yard.",
+          "inRoomDescription": "There is a North Path leading out of the clearing.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "quarrel",
+          "traversableName": "East Path",
+          "description": "A grassy path.",
+          "traversableActionString": "You continue venturing deeper into the forest.",
+          "inRoomDescription": "There is an East Path leading out of the clearing.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "quarrel",
+      "traversables": [
+        {
+          "toAreaId": "crow_nest",
+          "traversableName": "West Path",
+          "description": "A grassy path.",
+          "traversableActionString": "You return back whence ye came.",
+          "inRoomDescription": "There is a West Path leading out of the clearing.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "hill",
+          "traversableName": "East Path",
+          "description": "A slightly uphill grassy path.",
+          "traversableActionString": "The path is short, but it leaves you a little tired due to the uphill nature.",
+          "inRoomDescription": "There is an East Path, going uphill.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "great_tree",
+          "traversableName": "South Path",
+          "description": "Looks twisty.",
+          "traversableActionString": "This path has a few bends, but it's short.",
+          "inRoomDescription": "A South Path can be followed out of the clearing.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "hill",
+      "traversables": [
+        {
+          "toAreaId": "quarrel",
+          "traversableName": "West Path",
+          "description": "A downhill path, my favorite.",
+          "traversableActionString": "It's much easier going back down this path than it was coming up.",
+          "inRoomDescription": "There is a West Path.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "hill_interior",
+          "traversableName": "Hill Entrance",
+          "description": "Appears to be a spiral staircase going straight down into the hill.",
+          "traversableActionString": "You spend a minute or two climbing down the stairs. The amount of light does not seem to change.",
+          "inRoomDescription": "A spiral staircase acts as the Hill Entrance.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "hill_interior",
+      "traversables": [
+        {
+          "toAreaId": "hill",
+          "traversableName": "Spiral Staircase",
+          "description": "A spiral staircase leading back outside the hill.",
+          "traversableActionString": "You spend a few minutes climbing up the stairs and running out of breath.",
+          "inRoomDescription": "There's the tall column holding the Spiral Staircase.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "goblin_cache",
+          "traversableName": "Metal Door",
+          "description": "A sturdy metal door.",
+          "traversableActionString": "The door swings open and you walk through.",
+          "inRoomDescription": "There is a Metal Door.",
+          "requiredItemIds": ["hidden_outhouse_key"]
+        },
+        {
+          "toAreaId": "goblin_hideout",
+          "traversableName": "Narrow Passage",
+          "description": "This is my hole! It was made for me!",
+          "traversableActionString": "You ignore your feelings of claustrophobia and squeeze through, walking only for a moment before arriving at the next room.",
+          "inRoomDescription": "There is a Narrow Passage that appears to be barely wide enough to fit you.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "goblin_hideout",
+      "traversables": [
+        {
+          "toAreaId": "goblin_cache",
+          "traversableName": "Shoddy Door",
+          "description": "Merely an imitation of a door.",
+          "traversableActionString": "The door creaks open and you pass through.",
+          "inRoomDescription": "There is a wooden Shoddy Door.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "hill_interior",
+          "traversableName": "Narrow Passage",
+          "description": "Looks a bit tight.",
+          "traversableActionString": "You slide through for a brief moment.",
+          "inRoomDescription": "There is a Narrow Passage leading back in the direction of the stairs.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "goblin_cache",
+      "traversables": [
+        {
+          "toAreaId": "goblin_hideout",
+          "traversableName": "Shoddy Door",
+          "description": "You could probably make a better door, and you're, well, you.",
+          "traversableActionString": "The door creaks open and you pass through.",
+          "inRoomDescription": "A wooden, poorly made Shoddy Door leads away from the mess.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "hill_interior",
+          "traversableName": "Metal Door",
+          "description": "Couldn't knock this down if you tried.",
+          "traversableActionString": "The door swings open and you walk through.",
+          "inRoomDescription": "There's a Metal Door.",
+          "requiredItemIds": ["hidden_outhouse_key"]
+        }
+      ]
+    },
+    {
+      "areaId": "great_tree",
+      "traversables": [
+        {
+          "toAreaId": "quarrel",
+          "traversableName": "North Path",
+          "description": "It was twisty.",
+          "traversableActionString": "You return through the bendy path.",
+          "inRoomDescription": "There is a North Path.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "private_affairs",
+          "traversableName": "Southeast Path",
+          "description": "A grassy path",
+          "traversableActionString": "Continuing, ever onward, to the known and unknown.",
+          "inRoomDescription": "There is a Southeast Path.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "shrine_entrance",
+          "traversableName": "Southwest Path",
+          "description": "A grassy path. The grass seems greener.",
+          "traversableActionString": "This feels right. You continue your trek.",
+          "inRoomDescription": "There is a Southwest Path.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "private_affairs",
+      "traversables": [
+        {
+          "toAreaId": "great_tree",
+          "traversableName": "Lone Path",
+          "description": "A grassy path, and your only way out.",
+          "traversableActionString": "We're not retreating, we're just advancing in a different direction.",
+          "inRoomDescription": "This is a dead end, the only way to turn is through the Lone Path you followed.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "shrine_entrance",
+      "traversables": [
+        {
+          "toAreaId": "great_tree",
+          "traversableName": "North Path",
+          "description": "A grassy path. The grass seems duller.",
+          "traversableActionString": "Maybe you forgot something, you head back north.",
+          "inRoomDescription": "There is a North Path.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "grass_overlook",
+          "traversableName": "South Path",
+          "description": "An uphill path. You'd be grumpy about the idea, but you want to see where it leads.",
+          "traversableActionString": "You begin your trek upwards. This trail takes over half an hour as you wind around a steep cliff. You're a bit winded as you reach a new clearing.",
+          "inRoomDescription": "There is an uphill South Path.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "grassy_overlook",
+      "traversables": [
+        {
+          "toAreaId": "shrine_entrance",
+          "traversableName": "West Path",
+          "description": "A downhill path, returning to the land down under.",
+          "traversableActionString": "You retrace your steps, winding once more around the cliff.",
+          "inRoomDescription": "A West Path leads back downhill.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "vine_cocoons",
+          "traversableName": "South Path",
+          "description": "Another uphill trail with no end in sight. You're surprised to not be disgusted upon seeing it.",
+          "traversableActionString": "Once again, you find yourself on a winding, uphill path. You can see the sky growing darker as you hike. Another clearing comes to view.",
+          "inRoomDescription": "A South Path continues uphill.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "vine_cocoons",
+      "traversables": [
+        {
+          "toAreaId": "grassy_overlook",
+          "traversableName": "West Path",
+          "description": "This leads back downhill. Who knows how much further we must go?",
+          "traversableActionString": "You know your reasons. You return downhill.",
+          "inRoomDescription": "A West Path leads back downhill.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "shrine_base",
+          "traversableName": "North Path",
+          "description": "Even more uphill climbing, what could be worse? But you still don't seem to mind. It's as if whatever is at the top is calling you.",
+          "traversableActionString": "You climb and climb, hike and hike, but it feels good. You are compelled to continue. The skies continue to darken, the smell of smoke grows stronger. Two hours later, you hit another clearing.",
+          "inRoomDescription": "A North Path continues uphill.",
+          "requiredItemIds": []
+        }
+      ]
+    },
+    {
+      "areaId": "shrine_base",
+      "traversables": [
+        {
+          "toAreaId": "vine_cocoons",
+          "traversableName": "West Path",
+          "description": "A downhill path.",
+          "traversableActionString": "You return downhill. Your body feels… disappointed?",
+          "inRoomDescription": "A West Path returns downhill.",
+          "requiredItemIds": []
+        },
+        {
+          "toAreaId": "shrine",
+          "traversableName": "Veil of Large Leaves",
+          "description": "It feels almost wrong to consider passing through these leaves. But you know you must. Every inch of your body demands it.",
+          "traversableActionString": "",
+          "inRoomDescription": "A Veil of Large Leaves blocks your view of what lies ahead.",
+          "requiredItemIds": []
+        }
+      ]
+    }
+  ]
+}
