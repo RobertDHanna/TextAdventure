@@ -7,6 +7,7 @@ public class Player {
 
     private static final int BASE_HP = 20;
     private static final int BASE_AP = 10;
+    private static final int BASE_DMG = 3;
 
     //Sample experience values; subject to change.
     private static final int LEVEL1 = 10;
@@ -39,8 +40,8 @@ public class Player {
     private int bonus_int;
     private int bonus_con;
 
-    List<Equipment> equippedItems;
-    List<Item> inventory;
+    private List<Equipment> equippedItems;
+    private List<Item> inventory;
 
     public Player() {
 
@@ -124,5 +125,41 @@ public class Player {
         // we can put stuff to calculate new values for current_hp and current_ap here.
         current_hp = max_hp;
         current_ap = max_ap;
+    }
+
+    public int getHitDamage() {
+        return BASE_DMG + strength + bonus_str;
+    }
+
+    public int getMaxHp() {
+        return max_hp;
+    }
+
+    public int getCurrentHp() {
+        return current_hp;
+    }
+
+    public int getMaxAp() {
+        return max_ap;
+    }
+
+    public int getCurrentAp() {
+        return current_ap;
+    }
+
+    public int getDexterity() {
+        return dexterity;
+    }
+
+    public List<Item> getInventory() {
+        return inventory;
+    }
+
+    public void takeDamage(int damage) {
+        current_hp = current_hp - damage;
+    }
+
+    public void resetHp() {
+        current_hp = max_hp;
     }
 }

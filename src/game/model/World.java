@@ -105,7 +105,7 @@ public class World
     public String getItemIdByTrigger(String trigger) {
         String id = getItemIdByTrigger(trigger, areaIdToArea.get(currPlayerAreaId).getItems());
         if(id == null) {
-            id = getItemIdByTrigger(trigger, player.inventory);
+            id = getItemIdByTrigger(trigger, player.getInventory());
         }
         return id;
     }

@@ -1,5 +1,7 @@
 package game.model;
 
+import game.Battle;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -94,6 +96,11 @@ public class Area
                 }
                 handleInventory();
                 break;
+            case "battle":
+                Enemy goblin = new Enemy("Goblin", 10, 1, 2, 4);
+                Battle battle = new Battle();
+                battle.run(world.getPlayer(), goblin);
+                break;
             default:
                 this.printUnknownCommand();
         }
@@ -106,10 +113,10 @@ public class Area
     private void handleInventory() {
         Player player = world.getPlayer();
         StringBuilder answer = new StringBuilder("YOUR INVENTORY:\n");
-        for ( Item item : player.inventory){
+        for ( Item item : player.getInventory()){
             answer.append(String.format("%s - %s\n",item.getName(), item.getDescription()));
         }
-        if (player.inventory.size() == 0){
+        if (player.getInventory().size() == 0){
             answer.append("Is Empty!\n");
         }
 
