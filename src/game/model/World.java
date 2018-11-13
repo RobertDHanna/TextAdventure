@@ -78,8 +78,11 @@ public class World
         World.print("\n", area.getName(),"\n");
         World.print("\n", area.getDescription());
         List<Item> items = area.getItems();
+        HashMap<String, Item> playerInventoryMap = player.getInventoryAsMap();
         for (Item item : items) {
-            World.print(" ", item.getInRoomDescription());
+            if (!playerInventoryMap.containsKey(item.getId())) {
+                World.print(" ", item.getInRoomDescription());
+            }
         }
         World.print("\n");
         for (Traversable traversable : getTraversables(area.getId())) {

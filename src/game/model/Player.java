@@ -1,6 +1,7 @@
 package game.model;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class Player {
@@ -153,6 +154,14 @@ public class Player {
 
     public List<Item> getInventory() {
         return inventory;
+    }
+
+    public HashMap<String, Item> getInventoryAsMap() {
+        HashMap<String, Item> map = new HashMap<>();
+        for (Item item : inventory) {
+            map.put(item.getId(), item);
+        }
+        return map;
     }
 
     public void takeDamage(int damage) {
