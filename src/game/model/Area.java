@@ -99,7 +99,18 @@ public class Area
             case "battle":
                 Enemy goblin = new Enemy("Goblin", 10, 1, 2, 4);
                 Battle battle = new Battle();
-                battle.run(world.getPlayer(), goblin);
+                Battle.BattleResult battleResult = battle.run(world.getPlayer(), goblin);
+                switch (battleResult) {
+                    case PLAYER_WON:
+                        // handle player win
+                        break;
+                    case PLAYER_LOST:
+                        // handle player loss
+                        break;
+                    case PLAYER_RAN:
+                        // handle craven player
+                        break;
+                }
                 break;
             default:
                 this.printUnknownCommand();

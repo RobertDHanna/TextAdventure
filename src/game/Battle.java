@@ -11,6 +11,12 @@ import java.util.concurrent.TimeUnit;
 
 public class Battle {
 
+    public enum BattleResult {
+        PLAYER_WON,
+        PLAYER_LOST,
+        PLAYER_RAN
+    }
+
     //May make use of these in the future?
     private int turnCount;
     private int turnLimit;
@@ -19,7 +25,7 @@ public class Battle {
 
     }
 
-    public void run(Player player, Enemy enemy) {
+    public BattleResult run(Player player, Enemy enemy) {
 
         System.out.println("**************************************************************\n");
         System.out.println("You start the fight with the goblin!\n");
@@ -69,6 +75,7 @@ public class Battle {
                 case "2":
                 case "run":
                     System.out.println("You can't run from this fight!\n");
+                    // return BattleResult.PLAYER_RAN;
                     break;
                 default:
                     System.out.println("I don't recognize that command.\n");
@@ -77,9 +84,10 @@ public class Battle {
 
         if(enemy.getCurrentHp() <= 0) {
             System.out.println(String.format("You defeated the %s!\n", enemy.getName()));
-        }
-        if(player.getCurrentHp() <= 0) {
+            return BattleResult.PLAYER_WON;
+        } else {
             System.out.println("Oh dear, you are dead!\n");
+            return BattleResult.PLAYER_LOST;
         }
     }
 
