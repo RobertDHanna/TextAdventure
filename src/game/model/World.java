@@ -67,6 +67,15 @@ public class World
     }
 
     public void goToArea(Traversable traversable) {
+        List<String> requiredItemIds = traversable.getRequiredItemIds();
+        HashMap<String, Item> playerInventoryMap = player.getInventoryAsMap();
+        for (String itemId : requiredItemIds) {
+            if (!playerInventoryMap.containsKey(itemId)) {
+                World.print("\n", "You do not have the required item(s) to continue!","\n");
+                return;
+            }
+            World.print("\n", "Used ", playerInventoryMap.get(itemId).getName(), ".","\n");
+        }
         World.print("\n", traversable.getTraversableActionString(), "\n");
         currPlayerAreaId = traversable.getToAreaId();
         Area area = areaIdToArea.get(currPlayerAreaId);
