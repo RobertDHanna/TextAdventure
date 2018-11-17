@@ -47,4 +47,8 @@ public class ItemList {
         return "";
     }
 
+    public List<Item> getItems() {
+        return items;
+    }
+
 }

@@ -21,26 +21,26 @@ public class Item
         this.actionTriggers = actionTriggers;
     }
 
-    String getId()
+    public String getId()
     {
         return id;
     }
 
-    String getName() { return name; }
+    public String getName() { return name; }
 
-    String getDescription()
+    public String getDescription()
     {
         return description;
     }
 
-    String getInRoomDescription() { return inRoomDescription; }
+    public String getInRoomDescription() { return inRoomDescription; }
 
     public Boolean getPickupable()
     {
         return pickupable;
     }
 
-    List<String> getActionTriggers()
+    public List<String> getActionTriggers()
     {
         return actionTriggers;
     }

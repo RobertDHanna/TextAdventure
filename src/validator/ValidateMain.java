@@ -1,6 +1,7 @@
 package validator;
 
 import game.model.Model;
+import validator.validators.ItemIDUniquenessValidator;
 
 import java.util.*;
 
@@ -17,7 +18,8 @@ public class ValidateMain {
 
         List<IValidator> validators = new ArrayList<>();
 
-        // add validators
+        // add additional validators
+        validators.add(new ItemIDUniquenessValidator());
 
         Model model = new Model(map, areas, items);
         ValidateMain validator = new ValidateMain(validators);
