@@ -23,4 +23,8 @@ public class AreaList {
         }
         return null;
     }
+
+    public List<Area> getAreas() {
+        return areas;
+    }
 }
