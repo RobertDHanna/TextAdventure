@@ -20,9 +20,9 @@ public class Model implements IModel {
     private GameMap map;
 
     /**Creation of model data starts here*/
-    public Model() {
+    public Model(String mapName, String areasName, String itemsName) {
         try {
-            setupModelData();
+            setupModelData(mapName, areasName, itemsName);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
@@ -30,11 +30,11 @@ public class Model implements IModel {
     }
 
     /*Setup the data that needs to go inside the model**/
-    private void setupModelData() throws IOException {
+    private void setupModelData(String mapName, String areasName, String itemsName) throws IOException {
         Encoder en = new Encoder();
-        map = en.decodeFromFile(GameMap.class,"w1-map.json");
-        listOfAreas = en.decodeFromFile(AreaList.class,"w1-areas.json");
-        itemList = en.decodeFromFile(ItemList.class,"w1-items.json");
+        map = en.decodeFromFile(GameMap.class, mapName);
+        listOfAreas = en.decodeFromFile(AreaList.class, areasName);
+        itemList = en.decodeFromFile(ItemList.class,itemsName);
         itemList.setupItemList();
 
     }
