@@ -11,7 +11,7 @@
           "description": "A plain wooden door",
           "traversableActionString": "You open the door and step through.",
           "inRoomDescription": "There is a South Door.",
-          "requiredItemIds": []
+          "requiredItemIds": ["hidden_rock"]
         },
         {
           "toAreaId": "original_entryway",

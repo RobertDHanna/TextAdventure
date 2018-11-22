@@ -1,7 +1,12 @@
 package game.model;
 
+import com.google.gson.Gson;
+
 import game.Battle;
 
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.Writer;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -112,6 +117,14 @@ public class Area
                         break;
                 }
                 break;
+            case "save":
+                try {
+                    handleSave();
+                }
+                catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
             default:
                 this.printUnknownCommand();
         }
@@ -208,7 +221,7 @@ public class Area
     }
 
 
-        private void handleLook() {
+    private void handleLook() {
         world.describeArea(this);
     }
 
@@ -222,6 +235,22 @@ public class Area
             items.add(world.getItemById(itemId));
         }
         return items;
+    }
+
+    private void handleSave() throws IOException {
+        SaveData data = world.getPlayer().save();
+        data.setAreaID(id);
+
+        Gson gson = new Gson();
+        String json = gson.toJson(data);
+
+
+        try (Writer writer = new FileWriter("save.json")){
+            writer.write(json);
+        } catch (IOException e){
+            System.out.println(e.getMessage());
+            throw e;
+        }
     }
 
 }

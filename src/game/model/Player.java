@@ -171,4 +171,24 @@ public class Player {
     public void resetHp() {
         current_hp = max_hp;
     }
+
+    public SaveData save() {
+        SaveData data = new SaveData();
+
+        data.setBonus_con(bonus_con);
+        data.setBonus_dex(bonus_dex);
+        data.setBonus_int(bonus_int);
+        data.setBonus_str(bonus_str);
+        data.setConstitution(constitution);
+        data.setCurrent_ap(current_ap);
+        data.setCurrent_hp(current_hp);
+        data.setDexterity(dexterity);
+        data.setExp(exp);
+        data.setIntelligence(intelligence);
+        data.setMax_ap(max_ap);
+        data.setMax_hp(max_hp);
+        data.setStrength(strength);
+
+        return data;
+    }
 }
