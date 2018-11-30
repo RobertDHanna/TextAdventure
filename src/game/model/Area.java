@@ -28,7 +28,7 @@ public class Area
         this.world = world;
     }
 
-    String getId()
+    public String getId()
     {
         return id;
     }

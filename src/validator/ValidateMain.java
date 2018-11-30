@@ -1,6 +1,7 @@
 package validator;
 
 import game.model.Model;
+import validator.validators.AreaIDUniquenessValidator;
 import validator.validators.AreaItemIDsAreInItemListValidator;
 import validator.validators.ItemIDUniquenessValidator;
 
@@ -21,6 +22,7 @@ public class ValidateMain {
 
         // add additional validators
         validators.add(new ItemIDUniquenessValidator());
+        validators.add(new AreaIDUniquenessValidator());
         validators.add(new AreaItemIDsAreInItemListValidator());
 
         Model model = new Model(map, areas, items);
