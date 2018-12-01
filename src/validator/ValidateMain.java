@@ -27,6 +27,7 @@ public class ValidateMain {
         validators.add(new ItemIDUniquenessValidator());
         validators.add(new ItemsAreUsedOnceValidator());
         validators.add(new RequiredItemIDsExistValidator());
+        validators.add(new TraversableAreaIDsExistValidator());
 
         Model model = new Model(map, areas, items);
         ValidateMain validator = new ValidateMain(validators);
