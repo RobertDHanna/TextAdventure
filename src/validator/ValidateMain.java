@@ -1,10 +1,7 @@
 package validator;
 
 import game.model.Model;
-import validator.validators.AreaIDUniquenessValidator;
-import validator.validators.AreaItemIDsAreInItemListValidator;
-import validator.validators.ItemIDUniquenessValidator;
-import validator.validators.ItemsAreUsedOnceValidator;
+import validator.validators.*;
 
 import java.util.*;
 
@@ -24,6 +21,7 @@ public class ValidateMain {
         // add additional validators
         validators.add(new AreaIDUniquenessValidator());
         validators.add(new AreaItemIDsAreInItemListValidator());
+        validators.add(new BeginAndEndAreaIDsExistValidator());
         validators.add(new ItemIDUniquenessValidator());
         validators.add(new ItemsAreUsedOnceValidator());
 
