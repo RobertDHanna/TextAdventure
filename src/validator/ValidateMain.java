@@ -4,6 +4,7 @@ import game.model.Model;
 import validator.validators.AreaIDUniquenessValidator;
 import validator.validators.AreaItemIDsAreInItemListValidator;
 import validator.validators.ItemIDUniquenessValidator;
+import validator.validators.ItemsAreUsedOnceValidator;
 
 import java.util.*;
 
@@ -21,9 +22,10 @@ public class ValidateMain {
         List<IValidator> validators = new ArrayList<>();
 
         // add additional validators
-        validators.add(new ItemIDUniquenessValidator());
         validators.add(new AreaIDUniquenessValidator());
         validators.add(new AreaItemIDsAreInItemListValidator());
+        validators.add(new ItemIDUniquenessValidator());
+        validators.add(new ItemsAreUsedOnceValidator());
 
         Model model = new Model(map, areas, items);
         ValidateMain validator = new ValidateMain(validators);
