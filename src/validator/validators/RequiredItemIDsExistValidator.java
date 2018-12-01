@@ -20,7 +20,6 @@ public class RequiredItemIDsExistValidator implements IValidator {
             .map(Traversable::getRequiredItemIds)
             .flatMap(Collection::stream)
             .collect(Collectors.toSet());
-        System.out.println(String.join(", ", requiredItemIds));
 
         Set<String> allItemIds = model.getItemList().getItems().stream().map(Item::getId).collect(Collectors.toSet());
 
