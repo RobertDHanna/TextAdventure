@@ -19,6 +19,7 @@ public class ValidateMain {
         List<IValidator> validators = new ArrayList<>();
 
         // add additional validators here:
+        validators.add(new AllValidatorsAreUsedValidator(validators));
         validators.add(new AreaIDUniquenessValidator());
         validators.add(new AreaItemIDsAreInItemListValidator());
         validators.add(new BeginAndEndAreaIDsExistValidator());
