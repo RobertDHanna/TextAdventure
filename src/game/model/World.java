@@ -80,6 +80,7 @@ public class World
         currPlayerAreaId = traversable.getToAreaId();
         Area area = areaIdToArea.get(currPlayerAreaId);
         describeArea(area);
+        area.handleEnterArea();
     }
 
     public void describeArea(Area area) {

@@ -105,17 +105,7 @@ public class Area
                 Enemy goblin = new Enemy("goblin","Goblin", "description", 10, 1, 2, 4, 0, null);
                 Battle battle = new Battle();
                 Battle.BattleResult battleResult = battle.run(world.getPlayer(), goblin);
-                switch (battleResult) {
-                    case PLAYER_WON:
-                        // handle player win
-                        break;
-                    case PLAYER_LOST:
-                        // handle player loss
-                        break;
-                    case PLAYER_RAN:
-                        // handle craven player
-                        break;
-                }
+                handleBattleResult(battleResult);
                 break;
             case "save":
                 try {
@@ -127,6 +117,29 @@ public class Area
                 break;
             default:
                 this.printUnknownCommand();
+        }
+    }
+
+    public void handleEnterArea() {
+        // loop through enemies that haven't been defeated yet
+        // spawn a battle instance with that enemy
+
+        // Battle battle = new Battle();
+        // Battle.BattleResult battleResult = battle.run(world.getPlayer(), <ENEMY INSTANCE>);
+        // this.handleBattleResult(battleResult)
+    }
+
+    private void handleBattleResult(Battle.BattleResult battleResult) {
+        switch (battleResult) {
+            case PLAYER_WON:
+                // handle player win
+                break;
+            case PLAYER_LOST:
+                // handle player loss
+                break;
+            case PLAYER_RAN:
+                // handle craven player
+                break;
         }
     }
 
