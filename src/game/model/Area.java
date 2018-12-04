@@ -102,7 +102,7 @@ public class Area
                 handleInventory();
                 break;
             case "battle":
-                Enemy goblin = new Enemy("Goblin", 10, 1, 2, 4);
+                Enemy goblin = new Enemy("goblin","Goblin", "description", 10, 1, 2, 4, 0, null);
                 Battle battle = new Battle();
                 Battle.BattleResult battleResult = battle.run(world.getPlayer(), goblin);
                 switch (battleResult) {

@@ -14,7 +14,7 @@ import java.io.InputStreamReader;
 public class Game
 {
     public static void main(String[] args) {
-        World world = new World(new Model("w1-map.json", "w1-areas.json", "w1-items.json"), new Player());
+        World world = new World(new Model("w1-map.json", "w1-areas.json", "w1-items.json", "enemies.json"), new Player());
         run(world);
     }
 

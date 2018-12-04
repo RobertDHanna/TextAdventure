@@ -5,8 +5,9 @@ import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 public class Enemy {
-
+    private String id;
     private String name; //Example usage: "You start the fight with the [name]!"
+    private String battle_description;
     private int max_hp;
     private int current_hp;
 
@@ -26,16 +27,24 @@ public class Enemy {
     // Bosses will have a higher-than-average value for both.
 
     //Items and experience that the enemy drops when defeated. (Not implemented yet)
-    private List<Item> drops;
-    private int exp_points = 0;
+    private List<String> drops;
+    private int exp = 0;
 
-    public Enemy(String name, int hp, int dex, int min_hit, int max_hit) {
+    public Enemy(String id, String name, String battle_description, int hp, int dex, int min_hit, int max_hit, int exp, List<String> drops) {
+        this.id = id;
         this.name = name;
+        this.battle_description = battle_description;
         this.max_hp = hp;
         this.current_hp = hp;
         this.dexterity = dex;
         this.min_hit = min_hit;
         this.max_hit = max_hit;
+        this.exp = exp;
+        this.drops = drops;
+    }
+
+    public String getId() {
+        return id;
     }
 
     //This method returns a number between min_hit and max_hit

@@ -14,6 +14,8 @@ public class ValidateMain {
         String areas = scanner.nextLine();
         System.out.print("items file name (including .json): ");
         String items = scanner.nextLine();
+        System.out.print("enemies file name (including .json): ");
+        String enemies = scanner.nextLine();
 
 
         List<IValidator> validators = new ArrayList<>();
@@ -29,7 +31,7 @@ public class ValidateMain {
         validators.add(new RequiredItemIDsExistValidator());
         validators.add(new TraversableAreaIDsExistValidator());
 
-        Model model = new Model(map, areas, items);
+        Model model = new Model(map, areas, items, enemies);
         ValidateMain validator = new ValidateMain(validators);
         Map<Class<? extends IValidator>, ValidationException> failures = validator.run(model);
 

@@ -19,10 +19,12 @@ public class Model implements IModel {
     /*This variable holds the map object from the w1-map.json file**/
     private GameMap map;
 
+    private EnemyList listOfEnemies;
+
     /**Creation of model data starts here*/
-    public Model(String mapName, String areasName, String itemsName) {
+    public Model(String mapName, String areasName, String itemsName, String enemiesName) {
         try {
-            setupModelData(mapName, areasName, itemsName);
+            setupModelData(mapName, areasName, itemsName, enemiesName);
         } catch (Exception e) {
             e.printStackTrace();
             System.exit(1);
@@ -30,12 +32,13 @@ public class Model implements IModel {
     }
 
     /*Setup the data that needs to go inside the model**/
-    private void setupModelData(String mapName, String areasName, String itemsName) throws IOException {
+    private void setupModelData(String mapName, String areasName, String itemsName, String enemiesName) throws IOException {
         Encoder en = new Encoder();
         map = en.decodeFromFile(GameMap.class, mapName);
         listOfAreas = en.decodeFromFile(AreaList.class, areasName);
         itemList = en.decodeFromFile(ItemList.class,itemsName);
         itemList.setupItemList();
+        listOfEnemies = en.decodeFromFile(EnemyList.class, enemiesName);
 
     }
     public AreaList getListOfAreas() {
