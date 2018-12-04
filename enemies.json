@@ -1,0 +1,31 @@
+{
+  "enemies": [
+    {
+      "id": "goblin",
+      "name": "Goblin",
+      "battle_description": "As you walk into the clearing, you see a nasty looking creature turn to face you. It snarls, then jumps at you brandishing a knife!",
+      "maxHp": 10,
+      "exp": 5,
+      "dex": 1,
+      "minHit": 1,
+      "maxHit": 3,
+      "drops": [
+        "hidden_key",
+        "goblin_knife"
+      ]
+    },
+    {
+      "id": "squirrel",
+      "name": "Angry Squirrel",
+      "battle_description": "You walk up to a gnarled tree and see a cute little squirrel nibbling on an acorn. It looks friendly, and you make a move to touch it, but it squeaks angrily and leaps at your face!",
+      "maxHp": 8,
+      "exp": 5,
+      "dex": 3,
+      "minHit": 1,
+      "maxHit": 2,
+      "drops": [
+        "acorn"
+      ]
+    }
+  ]
+}
