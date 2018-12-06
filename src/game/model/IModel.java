@@ -4,4 +4,5 @@ public interface IModel {
     AreaList getListOfAreas();
     ItemList getItemList();
     GameMap getMap();
+    EnemyList getEnemyList();
 }

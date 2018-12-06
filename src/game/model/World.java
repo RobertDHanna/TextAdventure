@@ -7,6 +7,7 @@ public class World
 {
     private GameMap map;
     private Player player;
+    private EnemyList enemyList;
     private String currPlayerAreaId;
     private Map<String, Area> areaIdToArea;
     private Map<String, Item> itemIdToItem;
@@ -15,6 +16,7 @@ public class World
     public World(IModel model, Player player)
     {
         this.map = model.getMap();
+        this.enemyList = model.getEnemyList();
         this.player = player;
         this.currPlayerAreaId = this.map.getStartAreaId();
 
@@ -126,4 +128,6 @@ public class World
     public Item getItemById(String id) {
         return itemIdToItem.get(id);
     }
+
+    public Enemy getEnemyById(String id) {return enemyList.getEnemy(id);}
 }

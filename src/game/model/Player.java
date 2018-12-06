@@ -43,6 +43,7 @@ public class Player {
 
     private List<Equipment> equippedItems;
     private List<Item> inventory;
+    private List<String> defeatedEnemies;
 
     public Player() {
 
@@ -64,6 +65,7 @@ public class Player {
 
         equippedItems = new ArrayList<>();
         inventory = new ArrayList<>();
+        defeatedEnemies = new ArrayList<>();
     }
 
     void addToInventory(Item item) {
@@ -190,5 +192,13 @@ public class Player {
         data.setStrength(strength);
 
         return data;
+    }
+
+    public void addDefeatedEnemy(String areaIdPlusEnemyId) {
+        defeatedEnemies.add(areaIdPlusEnemyId.trim().toLowerCase());
+    }
+
+    public Boolean hasAlreadyDefeatedEnemy(String areaIdPlusEnemyId) {
+        return defeatedEnemies.contains(areaIdPlusEnemyId.trim().toLowerCase());
     }
 }

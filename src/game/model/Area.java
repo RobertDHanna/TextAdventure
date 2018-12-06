@@ -17,14 +17,16 @@ public class Area
     private String name;
     private String description;
     private List<String> itemIds;
+    private List<String> enemyIds;
     private World world;
 
-    public Area(String id, String name, String description, List<String> itemIds, World world)
+    public Area(String id, String name, String description, List<String> itemIds, List<String> enemyIds, World world)
     {
         this.id = id;
         this.name = name;
         this.description = description;
         this.itemIds = itemIds;
+        this.enemyIds = enemyIds;
         this.world = world;
     }
 
@@ -105,7 +107,7 @@ public class Area
                 Enemy goblin = new Enemy("goblin","Goblin", "description", 10, 1, 2, 4, 0, null);
                 Battle battle = new Battle();
                 Battle.BattleResult battleResult = battle.run(world.getPlayer(), goblin);
-                handleBattleResult(battleResult);
+                handleBattleResult(battleResult, "goblin");
                 break;
             case "save":
                 try {
@@ -121,18 +123,22 @@ public class Area
     }
 
     public void handleEnterArea() {
-        // loop through enemies that haven't been defeated yet
-        // spawn a battle instance with that enemy
-
-        // Battle battle = new Battle();
-        // Battle.BattleResult battleResult = battle.run(world.getPlayer(), <ENEMY INSTANCE>);
-        // this.handleBattleResult(battleResult)
+        for (String enemyId : enemyIds) {
+            if (world.getPlayer().hasAlreadyDefeatedEnemy(id + enemyId)) {
+                continue;
+            }
+            Enemy enemy = world.getEnemyById(enemyId);
+            Battle battle = new Battle();
+            Battle.BattleResult battleResult = battle.run(world.getPlayer(), enemy);
+            handleBattleResult(battleResult, enemyId);
+        }
     }
 
-    private void handleBattleResult(Battle.BattleResult battleResult) {
+    private void handleBattleResult(Battle.BattleResult battleResult, String enemyId) {
         switch (battleResult) {
             case PLAYER_WON:
                 // handle player win
+                world.getPlayer().addDefeatedEnemy(id + enemyId);
                 break;
             case PLAYER_LOST:
                 // handle player loss

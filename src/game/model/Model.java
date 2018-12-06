@@ -19,7 +19,7 @@ public class Model implements IModel {
     /*This variable holds the map object from the w1-map.json file**/
     private GameMap map;
 
-    private EnemyList listOfEnemies;
+    private EnemyList enemyList;
 
     /**Creation of model data starts here*/
     public Model(String mapName, String areasName, String itemsName, String enemiesName) {
@@ -38,7 +38,7 @@ public class Model implements IModel {
         listOfAreas = en.decodeFromFile(AreaList.class, areasName);
         itemList = en.decodeFromFile(ItemList.class,itemsName);
         itemList.setupItemList();
-        listOfEnemies = en.decodeFromFile(EnemyList.class, enemiesName);
+        enemyList = en.decodeFromFile(EnemyList.class, enemiesName);
 
     }
     public AreaList getListOfAreas() {
@@ -52,5 +52,9 @@ public class Model implements IModel {
 
     public GameMap getMap() {
         return map;
+    }
+
+    public EnemyList getEnemyList() {
+        return enemyList;
     }
 }

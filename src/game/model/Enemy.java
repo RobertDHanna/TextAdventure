@@ -30,13 +30,13 @@ public class Enemy {
     private List<String> drops;
     private int exp = 0;
 
-    public Enemy(String id, String name, String battle_description, int hp, int dex, int min_hit, int max_hit, int exp, List<String> drops) {
+    public Enemy(String id, String name, String battle_description, int max_hp, int dexterity, int min_hit, int max_hit, int exp, List<String> drops) {
         this.id = id;
         this.name = name;
         this.battle_description = battle_description;
-        this.max_hp = hp;
-        this.current_hp = hp;
-        this.dexterity = dex;
+        this.max_hp = max_hp;
+        this.current_hp = max_hp;
+        this.dexterity = dexterity;
         this.min_hit = min_hit;
         this.max_hit = max_hit;
         this.exp = exp;

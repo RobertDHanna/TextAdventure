@@ -1,13 +1,11 @@
 import game.encode.Encoder;
-import game.model.AreaList;
-import game.model.GameMap;
-import game.model.IModel;
-import game.model.ItemList;
+import game.model.*;
 
 public class ModelFromJSONStrings implements IModel {
     private final AreaList mAreaList;
     private final ItemList mItemList;
     private final GameMap mGameMap;
+    private EnemyList mEnemyList;
 
     public ModelFromJSONStrings(String map, String areas, String items) {
         Encoder en = new Encoder();
@@ -29,5 +27,10 @@ public class ModelFromJSONStrings implements IModel {
     @Override
     public GameMap getMap() {
         return mGameMap;
+    }
+
+    @Override
+    public EnemyList getEnemyList() {
+        return mEnemyList;
     }
 }
