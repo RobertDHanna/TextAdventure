@@ -50,7 +50,7 @@
   {
     "id": "crow_nest",
     "name": "Crow's Nest",
-    "description": "As you enter the clearing, you immediately notice dozens black objects hanging upside down from the branches, each appearing to be looking in your direction. You think they're bats, but quickly realize that they are actually crows. They make no noise, even after you proceed a few more steps into the clearing. Then, finally,you hear something. A deep growl behind you picks up volume and culminates in the loudest caw you have ever heard in your life. You turn to find yourself eye to eye with an enormous crow that stands as tall as you.",
+    "description": "The crows have all disappeared. It’s quiet again, but you feel at ease this time. The place reeks, fresh crow droppings litter the floor. Let’s get out of here.",
     "itemIds": [],
     "enemyIds": []
   },
@@ -78,7 +78,7 @@
   {
     "id": "goblin_hideout",
     "name": "Goblin Hideout",
-    "description": "A few candles sit around the room. In the center of the room, three goblins drop their cards on their table and begin approaching you.",
+    "description": "Now, three bodies litter the floor of this room. Some cards are laid on the table, others scattered around the floor.",
     "itemIds": ["markings", "cards", "fabric"],
     "enemyIds": []
   },
@@ -99,14 +99,14 @@
   {
     "id": "private_affairs",
     "name": "Private Affairs",
-    "description": "To your surprise, two elk are sitting closely together, chatting gleefully with another elk who is standing. They appear to be sitting on chairs made of thick, living roots that have broken through the ground. The standing elk has a hoofed appendage stretched along the back of one of these curious chairs. You have been so captivated in the scene that you did not notice that the chat ended some time ago. These friends now seem to be deeply interested in you.",
+    "description": "The elk certainly are a contentious people. Still, their handiwork in chairs of root is something to be commended. Neat!",
     "itemIds": ["root_chair"],
     "enemyIds": []
   },
   {
     "id": "shrine_entrance",
     "name": "Shrine Entrance",
-    "description": "The clearing appears to be perfectly circular. A large basin of water is planted in the center, formed by thick, interweaved vines. A beautiful green woman stands guard at the south end. Despite her imposing stance, she is only one foot tall. Her wings, like that of a butterfly's, shimmer in the light. She smiles at you, but she does not speak to you, and her eyes never once turn away from you, nor blink. She grips a sharp spear between her tiny hands.",
+    "description": "The clearing appears to be perfectly circular. A large basin of water is planted in the center, formed by thick, interweaved vines. The body of the pixie has turned to dust.",
     "itemIds": ["basin"],
     "enemyIds": []
   },
@@ -134,7 +134,7 @@
   {
     "id": "shrine",
     "name": "Shrine",
-    "description": "An enormous man, layered in heavy armor and at least twice your height, stands with his back to you. Flames jet from his wrists, setting what appears to have been a shrine ablaze. A vine launches from the surrounding thicket, puncturing a tank on his back. In a blast, the man is gone as soon as you saw him. Before you can react to the rapidly changing situation, a section of the dense surrounding thicket begins to part. A large mass of vines lumbers into the clearing. 'Humans… do not… belong...'",
+    "description": "You are alone once more, surrounded by charred trees and shrubbery. The lone remnant of the shrine is a strange orb, floating in place. It calls to you, begs for you.",
     "itemIds": [],
     "enemyIds": []
   }
