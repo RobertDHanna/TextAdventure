@@ -132,6 +132,7 @@ public class Area
             Battle.BattleResult battleResult = battle.run(world.getPlayer(), enemy);
             handleBattleResult(battleResult, enemyId);
         }
+        world.describeArea(this);
     }
 
     private void handleBattleResult(Battle.BattleResult battleResult, String enemyId) {
@@ -182,13 +183,13 @@ public class Area
         Item myItem = world.getItemById(itemStr);
 
         if(myItem == null){
-            World.print(String.format("No such item \'%s\' in this area\n",trigger));
+            World.print(String.format("No such item \'%s\' in this area\n\n", trigger));
         }
         else if(myItem.getDescription().isEmpty()){
-            World.print("There seems to be no description for this object\n");
+            World.print("There seems to be no description for this object\n\n");
         }
         else {
-            World.print(myItem.getDescription(), "\n");
+            World.print(myItem.getDescription(), "\n\n");
         }
     }
 

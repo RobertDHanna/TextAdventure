@@ -7,177 +7,74 @@
 
 
    {
-
-
      "id": "goblin",
-
-
      "name": "Goblin",
-
-
-     "battle_description": "A few candles sit around the room. In the center of the room, two goblins rest in a pool of blood next to a table, playing cards everywhere. One stands above them, notices you, and leaps in your direction.",
-
-
-     "maxHp": 10,
-
-
+     "battle_description": "A few candles sit around the room. In the center of the room, two goblins lie in a pool of blood next to a table, playing cards strewn everywhere. Another goblin stands above them. As you approach, the goblin notices you and leaps in your direction!",
+     "max_hp": 10,
+     "current_hp": 10,
      "exp": 5,
-
-
-     "dexterity": 3,
-
-
+     "dexterity": 2,
      "min_hit": 1,
-
-
      "max_hit": 3,
-
-
      "drops": [
 
      ]
-
-
    },
-
-
    {
-
-
      "id": "crow",
-
-
      "name": "Crow Queen",
-
-
-     "battle_description": "As you enter the clearing, you immediately notice dozens black objects hanging upside down from the branches. You think they’re bats, but quickly realize that they are actually crows. They make no noise, even after you proceed a few more steps into the clearing. Suddenly, a deep growl behind you picks up volume and grows into the loudest caw you have ever heard in your life. You turn to find yourself eye to eye with an enormous crow that stands as tall as you.",
-
-
-     "maxHp": 12,
-
-
-     "exp": 5,
-
-
+     "battle_description": "As you enter the clearing, you immediately notice dozens of black objects hanging upside down from the branches. You think they’re bats, but quickly realize that they are actually crows. They make no noise, even after you proceed a few more steps into the clearing. Suddenly, a deep growl behind you picks up volume and grows into the loudest caw you have ever heard in your life. You turn to find yourself eye to eye with an enormous crow that stands as tall as you.",
+     "max_hp": 25,
+     "current_hp": 25,
+     "exp": 8,
      "dexterity": 1,
-
-
-     "min_hit": 1,
-
-
-     "max_hit": 2,
-
-
+     "min_hit": 3,
+     "max_hit": 5,
      "drops": [
+
      ]
-
-
    },
-
    {
-
-
      "id": "pixie",
-
-
      "name": "Pixie Guardian",
-
-
      "battle_description": "A beautiful green woman stands before you. Despite her imposing stance, she is at most a single foot tall. Her wings, like that of a butterfly’s, shimmer in the light. She smiles at you, but she does not speak to you, and her eyes never once turn away from you, nor blink. She grips a sharp spear between her tiny hands. You take a step forward, and she no longer smiles.",
-
-
-     "maxHp": 15,
-
-
+     "max_hp": 15,
+     "current_hp": 15,
      "exp": 10,
-
-
      "dexterity": 5,
-
-
      "min_hit": 1,
-
-
-     "max_hit": 3,
-
-
+     "max_hit": 2,
      "drops": [
 
      ]
-
-
    },
-
    {
-
-
      "id": "mound",
-
-
      "name": "Great Shambling Mound",
-
-
      "battle_description": "An enormous man, layered in heavy armor and at least twice your height, stands with his back to you. Flames jet from his wrists, setting what appears to have been a shrine ablaze. A vine launches from the surrounding thicket, puncturing a tank on his back. In a blast, the man is gone as soon as you saw him. Before you can react to the rapidly changing situation, a section of the dense surrounding thicket begins to part. A large mass of vines lumbers into the clearing. ‘Humans… do not… belong...’",
-
-
-     "maxHp": 20,
-
-
+     "max_hp": 40,
+     "current_hp": 40,
      "exp": 20,
-
-
      "dexterity": 2,
-
-
-     "min_hit": 1,
-
-
-     "max_hit": 3,
-
-
+     "min_hit": 3,
+     "max_hit": 5,
      "drops": [
 
      ]
-
-
    },
-
    {
-
-
      "id": "elk",
-
-
      "name": "Interrupted Elk",
-
-
-     "battle_description": "To your surprise, two elk are sitting closely together, chatting gleefully with another elk who is standing. They appear to be sitting on chairs made of thick, living roots that have broken through the ground. The standing elk has a hoofed appendage stretched along the back of one of these curious chairs. You have been so captivated in the scene that you did not notice that the chat ended some time ago. These friends now seem to be deeply interested in you. You take a step forward, and two leap into the woods. The largest approaches you.",
-
-
-     "maxHp": 10,
-
-
-     "exp": 5,
-
-
-     "dexterity": 2,
-
-
-     "min_hit": 1,
-
-
-     "max_hit": 3,
-
-
+     "battle_description": "You walk into the new area. To your surprise, two elk are sitting closely together, chatting gleefully with another elk who is standing. They appear to be sitting on chairs made of thick, living roots that have broken through the ground. The standing elk has a hoofed appendage stretched along the back of one of these curious chairs. You have been so captivated in the scene that you did not notice that the chat ended some time ago. These friends now seem to be deeply interested in you. You take a step forward, and two leap into the woods. The largest approaches you.",
+     "max_hp": 15,
+     "current_hp": 10,
+     "exp": 7,
+     "dexterity": 3,
+     "min_hit": 2,
+     "max_hit": 4,
      "drops": [
 
      ]
-
-
    }
-
-
  ]
-
-
 }

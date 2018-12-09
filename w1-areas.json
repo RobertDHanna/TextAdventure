@@ -80,7 +80,7 @@
     "name": "Goblin Hideout",
     "description": "Now, three bodies litter the floor of this room. Some cards are laid on the table, others scattered around the floor.",
     "itemIds": ["markings", "cards", "fabric"],
-    "enemyIds": []
+    "enemyIds": ["goblin"]
   },
   {
     "id": "goblin_cache",

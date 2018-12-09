@@ -1,5 +1,8 @@
 package game.model;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -53,9 +56,27 @@ public class World
     }
 
     public void printStartingWorldDialog() {
-        World.print("You wake up in your bedroom at the start of another perfectly normal day.  Or is it...?  You have a strange feeling that something isn't right, but you push it away.  You get up out of bed and stretch.  You are already fully clothed for some reason, but that doesn't seem to bother you.  Time to see what this day has in store!","\n",
-                "\n",
-                "Welcome to $GameNameHere! Type 'help' at anytime for a list of available commands.", "\n\n");
+        World.print("\nYou wake up in your bedroom at the start of another perfectly normal day.  Or is it...?  You have a strange feeling that something isn't right, but you push it away.  You get up out of bed and stretch.  You are already fully clothed for some reason, but that doesn't seem to bother you.  Time to see what this day has in store!","\n\n");
+    }
+
+    public void getPlayerName() {
+        World.print("Welcome to $GameNameHere! What is your name?", "\n\n");
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String name = "";
+        World.print(">>: ");
+        try {
+            name = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+        this.player.setName(name);
+        System.out.println();
+    }
+
+    public void allocateStartingStats() {
+        System.out.println(String.format("Hello %s! Please allocate your starting stat points.", this.player.getName()));
+        this.player.levelUp();
     }
 
     public static void print(String... printables) {
@@ -81,7 +102,6 @@ public class World
         World.print("\n", traversable.getTraversableActionString(), "\n");
         currPlayerAreaId = traversable.getToAreaId();
         Area area = areaIdToArea.get(currPlayerAreaId);
-        describeArea(area);
         area.handleEnterArea();
     }
 
@@ -101,7 +121,7 @@ public class World
             World.print(traversable.getInRoomDescription(), " ");
         }
         World.print("\n");
-        World.print("\n**************************************************************\n");
+        World.print("\n**************************************************************\n\n");
     }
 
     public Player getPlayer() {

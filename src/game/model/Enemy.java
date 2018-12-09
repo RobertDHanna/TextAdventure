@@ -27,8 +27,8 @@ public class Enemy {
     // Bosses will have a higher-than-average value for both.
 
     //Items and experience that the enemy drops when defeated. (Not implemented yet)
-    private List<String> drops;
-    private int exp = 0;
+    private List<String> drops = new ArrayList<>();
+    private int exp;
 
     public Enemy(String id, String name, String battle_description, int max_hp, int dexterity, int min_hit, int max_hit, int exp, List<String> drops) {
         this.id = id;
@@ -66,6 +66,18 @@ public class Enemy {
 
     public int getDexterity() {
         return dexterity;
+    }
+
+    public int getExp() {
+        return exp;
+    }
+
+    public List<String> getDrops() {
+        return drops;
+    }
+
+    public String getBattleDescription() {
+        return battle_description;
     }
 
     public void takeDamage(int damage) {

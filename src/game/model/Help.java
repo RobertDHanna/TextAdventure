@@ -17,7 +17,7 @@ public class Help {
             LOOK_USAGE, " - look at the area you're in\n",
             INVENTORY, " - show what is in your inventory\n",
             PICKUP_USAGE, " - pick up an item\n",
-            "help - print this helpful message again!\n"
+            "help - print this helpful message again!\n\n"
         );
     }
 }

@@ -27,11 +27,14 @@ public class Battle {
 
     public BattleResult run(Player player, Enemy enemy) {
 
-        System.out.println("**************************************************************\n");
-        System.out.println("You start the fight with the goblin!\n");
+        System.out.println(enemy.getBattleDescription());
+        System.out.println();
+        System.out.print("Press the enter key to continue...");
+        getTrimmedLowerCaseInput();
+        System.out.println();
 
-        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        String input = "";
+        System.out.println("**************************************************************\n");
+        System.out.println(String.format("You start the fight with the %s!\n", enemy.getName()));
 
         while (player.getCurrentHp() > 0 && enemy.getCurrentHp() > 0) {
 
@@ -41,15 +44,8 @@ public class Battle {
             System.out.println("2: Run\n");
             System.out.print(">>: ");
 
-            try {
-                input = br.readLine();
-            } catch (IOException e) {
-                e.printStackTrace();
-                System.exit(1);
-            }
-
+            String input = getTrimmedLowerCaseInput();
             System.out.print("\n");
-            input = input.trim().toLowerCase();
 
             switch(input) {
                 case "1":
@@ -83,7 +79,15 @@ public class Battle {
         }
 
         if(enemy.getCurrentHp() <= 0) {
-            System.out.println(String.format("You defeated the %s!\n", enemy.getName()));
+            System.out.println(String.format("You defeated the %s!", enemy.getName()));
+            System.out.println(String.format("You gained %d experience points.\n", enemy.getExp()));
+            for (String s : enemy.getDrops()) {
+                System.out.println(String.format("The %s dropped a %s.", enemy.getName(), s));
+            }
+            System.out.print("Press the enter key to continue...");
+            getTrimmedLowerCaseInput();
+            System.out.println();
+            player.gainExperience(enemy.getExp());
             return BattleResult.PLAYER_WON;
         } else {
             System.out.println("Oh dear, you are dead!\n");
@@ -112,4 +116,17 @@ public class Battle {
         System.out.println(String.format("     Your AP: %s/%s\n", player.getCurrentAp(), player.getMaxAp()));
     }
 
+    private String getTrimmedLowerCaseInput() {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        String input = "";
+
+        try {
+            input = br.readLine();
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+
+        return input.trim().toLowerCase();
+    }
 }
