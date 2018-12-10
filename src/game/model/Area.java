@@ -110,6 +110,9 @@ public class Area
                 Battle.BattleResult battleResult = battle.run(world.getPlayer(), goblin);
                 handleBattleResult(battleResult, "goblin");
                 break;
+            case "stats":
+                world.getPlayer().printStats();
+                break;
             case "save":
                 try {
                     handleSave();
@@ -161,7 +164,7 @@ public class Area
     }
 
     private void printUnknownCommand() {
-        World.print("I don't understand what you mean...", "\n");
+        World.print("I don't understand what you mean...", "\n\n");
     }
 
     private void handleInventory() {
@@ -213,7 +216,7 @@ public class Area
                 return;
             }
         }
-        world.print("I'm not sure where that is...\n");
+        world.print("I'm not sure where that is...\n\n");
     }
 
     private boolean isItemInArea(Item item) {
@@ -229,12 +232,12 @@ public class Area
         String itemStr = getItemIdByTrigger(trigger);
         Item myItem = world.getItemById(itemStr);
         if(myItem == null || !isItemInArea(myItem)){
-            World.print(String.format("No such item \'%s\' in this area\n",trigger));
+            World.print(String.format("No such item \'%s\' in this area\n\n",trigger));
         }
         else if(myItem.getDescription().isEmpty()){
-            World.print("There seems to be no description for this object\n");
+            World.print("There seems to be no description for this object\n\n");
         } else if(!myItem.getPickupable()) {
-            World.print(String.format("You can't pick up %s!", myItem.getName()), "\n");
+            World.print(String.format("You can't pick up %s!", myItem.getName()), "\n\n");
         } else {
             world.getPlayer().addToInventory(myItem);
 
@@ -245,7 +248,7 @@ public class Area
                     break;
                 }
             }
-            World.print(String.format("%s picked up!\n",myItem.getName()));
+            World.print(String.format("%s picked up!\n\n",myItem.getName()));
         }
 
     }
@@ -291,7 +294,7 @@ public class Area
             System.out.println(e.getMessage());
             throw e;
         }
-        world.print("Successfully saved\n");
+        world.print("Successfully saved\n\n");
     }
 
 }

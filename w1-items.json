@@ -16,6 +16,14 @@
     "actionTriggers": ["letter"]
   },
   {
+    "id": "bed",
+    "name": "Bed",
+    "description": "Your bed. Not too hard, not too soft, just right.",
+    "pickupable": false,
+    "inRoomDescription": "",
+    "actionTriggers": ["bed"]
+  },
+  {
     "id": "television",
     "name": "Telly",
     "description": "A $200 plasma tv. You hung it on the wall yourself! Sometimes, you could just stand there and watch television for hours.",
@@ -100,7 +108,7 @@
     "name": "Lamppost",
     "description": "Who put this here anyway? I don't see the point.",
     "pickupable": false,
-    "inRoomDescription": "Lying on the ground besides the fingerpost is a charming electric lamppost that appears to have been torn out of the ground.",
+    "inRoomDescription": "Lying on the ground beside the fingerpost is a charming electric lamppost that appears to have been torn out of the ground.",
     "actionTriggers": ["lamppost", "lamp post", "lamp"]
   },
   {

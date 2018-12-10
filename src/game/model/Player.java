@@ -6,6 +6,7 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 public class Player {
 
@@ -162,14 +163,14 @@ public class Player {
         max_hp = BASE_HP + (4 * (constitution + bonus_con));
         max_ap = BASE_AP + (2 * (intelligence + bonus_int));
 
-        //Currently, the player will always be at full health outside of battle. If this changes later,
-        // we can put stuff to calculate new values for current_hp and current_ap here.
         current_hp = max_hp;
         current_ap = max_ap;
     }
 
     public int getHitDamage() {
-        return BASE_DMG + strength + bonus_str;
+        Random rand = new Random();
+        int random_hit = rand.nextInt(2) + 1;
+        return random_hit + strength + bonus_str;
     }
 
     public int getMaxHp() {
@@ -366,6 +367,7 @@ public class Player {
         this.dexterity += points_to_dex;
         this.constitution += points_to_con;
         this.intelligence += points_to_int;
+        calculateHpAndAp();
     }
 
     private int getPointChoice(String stat) {
@@ -421,5 +423,15 @@ public class Player {
         max_hp = data.getMax_hp();
         strength = data.getStrength();
         defeatedEnemies = data.getDefeated();
+    }
+
+    public void printStats() {
+        System.out.println("Your Stats:\n");
+        System.out.println(String.format("HP: %d/%d", current_hp, max_hp));
+        System.out.println(String.format("AP: %d/%d\n", current_ap, max_ap));
+        System.out.println(String.format("Strength: %d", strength));
+        System.out.println(String.format("Dexterity: %d", dexterity));
+        System.out.println(String.format("Constitution: %d", constitution));
+        System.out.println(String.format("Intelligence: %d\n", intelligence));
     }
 }

@@ -27,6 +27,7 @@ public class Battle {
 
     public BattleResult run(Player player, Enemy enemy) {
 
+        System.out.println();
         System.out.println(enemy.getBattleDescription());
         System.out.println();
         System.out.print("Press the enter key to continue...");

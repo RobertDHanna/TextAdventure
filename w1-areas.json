@@ -2,7 +2,7 @@
   "id": "original_bedroom",
   "name": "Your Bedroom",
   "description": "This is your bedroom, obviously. There's a comfortable looking bed.",
-  "itemIds": ["hidden_rock", "nightstand", "television", "bedroom_letter"],
+  "itemIds": ["hidden_rock", "nightstand", "television", "bedroom_letter", "bed"],
   "enemyIds": []
 },
   {
@@ -15,7 +15,7 @@
   {
     "id": "original_entryway",
     "name": "Your Entryway",
-    "description": "This is your entryway, obviously. A long, thin table rests against the wall between two wooden doors. On the table sits a vase with flowers and some books stacked in an artful manner. By the door, an iron sword and an iron shield dangle from wall-mounted key hooks. A note is clamped to the door.",
+    "description": "This is your entryway, obviously. A long, thin table rests against the wall between two wooden doors. On the table sits a vase with flowers and some books stacked in an artful manner. By the door, an iron sword and an iron shield dangle from wall-mounted key hooks.",
     "itemIds": ["normal_books", "vase", "sword", "shield"],
     "enemyIds": []
   },
@@ -57,7 +57,7 @@
   {
     "id": "quarrel",
     "name": "The Quarrel",
-    "description": "Standing in the center of the clearing is shoddily put together fingerpost. The sign pointing south reads \"Kite - Eating Tree\" . The sign pointing east says \"A lotta hoopla\"",
+    "description": "Standing in the center of the clearing is shoddily put together fingerpost. The sign pointing south reads \"Kite-Eating Tree\". The sign pointing east says \"A lotta hoopla\".",
     "itemIds": ["lamppost"],
     "enemyIds": []
   },
