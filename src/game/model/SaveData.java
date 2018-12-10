@@ -1,5 +1,7 @@
 package game.model;
 
+import java.util.List;
+
 public class SaveData {
     private int max_hp;
     private int current_hp;
@@ -17,7 +19,8 @@ public class SaveData {
     private int bonus_int;
     private int bonus_con;
 
-    private String areaID;
+    private Traversable traversable;
+    private List<String> defeatedEnemies;
 
     public SaveData() {
 
@@ -127,11 +130,19 @@ public class SaveData {
         this.bonus_con = bonus_con;
     }
 
-    public String getAreaID() {
-        return areaID;
+    public Traversable getTraversable() {
+        return traversable;
     }
 
-    public void setAreaID(String areaID) {
-        this.areaID = areaID;
+    public void setTraversable(Traversable traversable) {
+        this.traversable = traversable;
+    }
+
+    public void setDefeated(List<String> defeatedEnemies) {
+        this.defeatedEnemies = defeatedEnemies;
+    }
+
+    public List<String> getDefeated() {
+        return this.defeatedEnemies;
     }
 }

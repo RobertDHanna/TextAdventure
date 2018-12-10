@@ -3,6 +3,7 @@ package game.model;
 import com.google.gson.Gson;
 
 import game.Battle;
+import game.encode.Encoder;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -114,6 +115,15 @@ public class Area
                     handleSave();
                 }
                 catch (IOException e) {
+                    System.out.println(e.getMessage());
+                }
+                break;
+            case "load":
+                try{
+                    handleLoad();
+                    System.out.println("Game Loaded!");
+                }
+                catch (IOException e){
                     System.out.println(e.getMessage());
                 }
                 break;
@@ -257,7 +267,18 @@ public class Area
         return items;
     }
 
+    private  void handleLoad() throws IOException{
+        Encoder encoder = new Encoder();
+        SaveData data = encoder.decodeFromFile(SaveData.class,"save.json");
+        world.setLastTraversable(data.getTraversable());
+        world.getPlayer().load(data);
+        if (world.getLastTraversable() != null) {
+            handleGo(world.getLastTraversable().getTraversableName());
+        }
+    }
     private void handleSave() throws IOException {
+        SaveData data = world.getPlayer().save();
+        data.setTraversable(world.getLastTraversable());
 
         world.getPlayer().setCurrentAreaID(id);
         Gson gson = new Gson();

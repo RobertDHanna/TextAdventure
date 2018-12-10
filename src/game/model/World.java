@@ -15,6 +15,7 @@ public class World
     private Map<String, Area> areaIdToArea;
     private Map<String, Item> itemIdToItem;
     private Map<String, List<Traversable>> areaIdToTraversables;
+    private Traversable lastTraversable;
 
     public World(IModel model, Player player)
     {
@@ -150,4 +151,12 @@ public class World
     }
 
     public Enemy getEnemyById(String id) {return enemyList.getEnemy(id);}
+
+    public Traversable getLastTraversable() {
+        return lastTraversable;
+    }
+
+    public void setLastTraversable(Traversable traversable) {
+        this.lastTraversable = traversable;
+    }
 }

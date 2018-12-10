@@ -404,4 +404,22 @@ public class Player {
     public void setCurrentAreaID(String id) {
         currentAreaID = id;
     }
+
+
+    public void load(SaveData data) {
+        bonus_con = data.getBonus_con();
+        bonus_dex = data.getBonus_dex();
+        bonus_int = data.getBonus_int();
+        bonus_str = data.getBonus_str();
+        constitution = data.getConstitution();
+        current_ap = data.getCurrent_ap();
+        current_hp = data.getCurrent_hp();
+        dexterity = data.getDexterity();
+        experience = data.getExp();
+        intelligence = data.getIntelligence();
+        max_ap = data.getMax_ap();
+        max_hp = data.getMax_hp();
+        strength = data.getStrength();
+        defeatedEnemies = data.getDefeated();
+    }
 }
