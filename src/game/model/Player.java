@@ -10,6 +10,7 @@ import java.util.List;
 public class Player {
 
     private String name;
+    private String currentAreaID;
 
     private static final int BASE_HP = 20;
     private static final int BASE_AP = 10;
@@ -58,6 +59,8 @@ public class Player {
     public Player() {
 
         name = "Player 1";
+
+
 
         //Starting values; if we implement allocating stat points at the beginning of the game, these can be changed.
         strength = 1;
@@ -396,5 +399,9 @@ public class Player {
         }
 
         return input.trim().toLowerCase();
+    }
+
+    public void setCurrentAreaID(String id) {
+        currentAreaID = id;
     }
 }

@@ -258,11 +258,10 @@ public class Area
     }
 
     private void handleSave() throws IOException {
-        SaveData data = world.getPlayer().save();
-        data.setAreaID(id);
 
+        world.getPlayer().setCurrentAreaID(id);
         Gson gson = new Gson();
-        String json = gson.toJson(data);
+        String json = gson.toJson(world.getPlayer());
 
 
         try (Writer writer = new FileWriter("save.json")){
