@@ -10,14 +10,14 @@
     "name": "Your Kitchen",
     "description": "This is your kitchen, obviously. In front of you sits a well-crafted wooden table with four matching chairs. An oven and sink take up part of your counters.",
     "itemIds": ["fridge", "cupboard", "oven", "kitchen_letter", "apple", "casserole", "drink"],
-    "enemyIds": ["goblin"]
+    "enemyIds": []
   },
   {
     "id": "original_entryway",
     "name": "Your Entryway",
     "description": "This is your entryway, obviously. A long, thin table rests against the wall between two wooden doors. On the table sits a vase with flowers and some books stacked in an artful manner. By the door, an iron sword and an iron shield dangle from wall-mounted key hooks. A note is clamped to the door.",
     "itemIds": ["normal_books", "vase", "sword", "shield"],
-    "enemyIds": ["goblin"]
+    "enemyIds": []
   },
   {
     "id": "yard",
@@ -52,7 +52,7 @@
     "name": "Crow's Nest",
     "description": "The crows have all disappeared. It’s quiet again, but you feel at ease this time. The place reeks, fresh crow droppings litter the floor. Let’s get out of here.",
     "itemIds": [],
-    "enemyIds": []
+    "enemyIds": ["crow"]
   },
   {
     "id": "quarrel",
@@ -101,14 +101,14 @@
     "name": "Private Affairs",
     "description": "The elk certainly are a contentious people. Still, their handiwork in chairs of root is something to be commended. Neat!",
     "itemIds": ["root_chair"],
-    "enemyIds": []
+    "enemyIds": ["elk"]
   },
   {
     "id": "shrine_entrance",
     "name": "Shrine Entrance",
     "description": "The clearing appears to be perfectly circular. A large basin of water is planted in the center, formed by thick, interweaved vines. The body of the pixie has turned to dust.",
     "itemIds": ["basin"],
-    "enemyIds": []
+    "enemyIds": ["pixie"]
   },
   {
     "id": "grassy_overlook",
@@ -136,6 +136,6 @@
     "name": "Shrine",
     "description": "You are alone once more, surrounded by charred trees and shrubbery. The lone remnant of the shrine is a strange orb, floating in place. It calls to you, begs for you.",
     "itemIds": [],
-    "enemyIds": []
+    "enemyIds": ["mound"]
   }
 ]}
