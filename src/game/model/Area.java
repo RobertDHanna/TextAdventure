@@ -271,6 +271,7 @@ public class Area
             System.out.println(e.getMessage());
             throw e;
         }
+        world.print("Successfully saved\n");
     }
 
 }

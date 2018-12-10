@@ -9,6 +9,7 @@ public class Help {
     public static String LOOK_USAGE = "look";
     public static String PICKUP_USAGE = "pickup <item>";
     static String INVENTORY = "inventory";
+    public static String SAVE_USAGE = "save";
 
     public static void handleHelp() {
         World.print(
@@ -17,6 +18,7 @@ public class Help {
             LOOK_USAGE, " - look at the area you're in\n",
             INVENTORY, " - show what is in your inventory\n",
             PICKUP_USAGE, " - pick up an item\n",
+            SAVE_USAGE, " - saves your game\n",
             "help - print this helpful message again!\n\n"
         );
     }
